@@ -1,0 +1,16 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+
+.connectWallerButton {
+    @include flex-center-vert;
+    @include buttonNulled;
+    padding: 12px 16px;
+    margin-left: 4px;
+    color: $green;
+    border-radius: 12px 12px 0px 12px;
+    border: 1px solid $green;
+    svg {
+        margin-right: 12px;
+    }
+}
