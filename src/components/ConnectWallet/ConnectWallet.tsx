@@ -4,6 +4,9 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import React, { useEffect, useState } from 'react';
 import { useAccount, useBalance } from 'wagmi';
 
+import MetamaskSvg from '../../assets/svgs/MetamaskSvg';
+import styles from './connectWallet.module.scss';
+
 const ConnectWallet: React.FC = () => {
   const [address, setAddress] = useState<string>('');
 
@@ -44,8 +47,12 @@ const ConnectWallet: React.FC = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button onClick={openConnectModal} type="button">
-                    Connect Wallet
+                  <button
+                    onClick={openConnectModal}
+                    type="button"
+                    className={styles.connectWallerButton}
+                  >
+                    <MetamaskSvg /> Connect MetaMask
                   </button>
                 );
               }

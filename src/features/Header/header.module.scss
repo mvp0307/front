@@ -1,0 +1,30 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.header {
+    padding: 17px 0;
+    .nav {
+        @include flex-center-vert;
+        .menu {
+            margin-left: auto;
+            @include flex-center-vert;
+            &Item {
+                @include flex-center-vert;
+                text-decoration: none;
+                color: $dark;
+                &:not(:last-child) {
+                    margin-right: 36px;
+                }
+                &:last-child {
+                    margin-left: 4px;
+                    color: $green;
+                    border-radius: 12px 12px 0px 12px;
+                    border: 1px solid $green;
+                    svg {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

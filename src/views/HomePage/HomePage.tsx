@@ -3,7 +3,7 @@ import Header from '../../features/Header/Header';
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="page">
       <Header />
       <Footer />
     </div>
