@@ -6,7 +6,7 @@
   @if ($lineHeight == initial) {
     line-height: $lineHeight;
   } @else {
-    line-height: $lineHeight / $size;
+    line-height: math.div($lineHeight, $size);
   }
 }
 // Font Size to rem end

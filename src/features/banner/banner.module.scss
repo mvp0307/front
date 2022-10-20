@@ -1,0 +1,30 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.bannerSection {
+    margin-top: 97px;
+    background-color: $darken;
+    padding: 18px 0;
+    @include flex-center-vert;
+    .banerRow {
+        @include flexRow(15, 2, center);
+        justify-content: space-between;
+        .banerLfet {
+            .bannerTitle {
+                @include fontRem(28, 700, 38);
+                color: rgba($white, 0.9);
+                margin-bottom: 4px;
+            }
+            .bannerSubTitle {
+                @include fontRem(40, 700, 55);
+                color: $white;
+            }
+        }
+        .bannerRight {
+            .bannerText {
+                @include fontRem(16, 500, 22);
+                color: $white;
+            }
+        }
+    }
+}
