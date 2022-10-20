@@ -14,3 +14,25 @@
         margin-right: 12px;
     }
 }
+.creds{
+    width: 215px;
+    height: 46px;
+    border: 1px solid #43AD9A;
+    border-radius: 12px 12px 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    color: #43AD9A;
+    .address{
+        display: flex;
+        margin-left: 15px;
+        height: 38px;
+        width: 144px;
+        background: rgba(67, 173, 154, 0.2);
+        border-radius: 8px 8px 0px 8px;
+        align-items: center;
+        justify-content: space-around;
+        color: #43AD9A;
+    }
+}

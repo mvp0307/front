@@ -1,38 +1,18 @@
 import '@rainbow-me/rainbowkit/styles.css';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import React, { useEffect, useState } from 'react';
-import { useAccount, useBalance } from 'wagmi';
+import Avatar from 'boring-avatars';
+import React from 'react';
 
 import MetamaskSvg from '../../assets/svgs/MetamaskSvg';
 import styles from './connectWallet.module.scss';
 
 const ConnectWallet: React.FC = () => {
-  const [address, setAddress] = useState<string>('');
-
-  useAccount({
-    onConnect({ address, connector, isReconnected }) {
-      console.log('Connected', { address, connector, isReconnected });
-      setAddress(address as any);
-    },
-    onDisconnect() {
-      console.log('Disconnected');
-    },
-  });
-  const { data, refetch } = useBalance({
-    addressOrName: address,
-    enabled: Boolean(address),
-  });
-  console.log(data);
-  useEffect(() => {
-    if (address) {
-      refetch();
-    }
-  }, [address]);
   return (
     <ConnectButton.Custom>
       {({ account, chain, openAccountModal, openChainModal, openConnectModal, mounted }) => {
         const connected = mounted && account && chain;
+        console.log(account);
         return (
           <div
             {...(!mounted && {
@@ -48,6 +28,7 @@ const ConnectWallet: React.FC = () => {
               if (!connected) {
                 return (
                   <button
+                    id="connect_button"
                     onClick={openConnectModal}
                     type="button"
                     className={styles.connectWallerButton}
@@ -69,36 +50,24 @@ const ConnectWallet: React.FC = () => {
                 <div style={{ display: 'flex', gap: 12 }}>
                   <button
                     onClick={openChainModal}
-                    style={{ display: 'flex', alignItems: 'center' }}
+                    style={{ display: 'flex', alignItems: 'center', background: 'aquamarine' }}
                     type="button"
                   >
-                    {chain.hasIcon && (
-                      <div
-                        style={{
-                          background: chain.iconBackground,
-                          width: 12,
-                          height: 12,
-                          borderRadius: 999,
-                          overflow: 'hidden',
-                          marginRight: 4,
-                        }}
-                      >
-                        {chain.iconUrl && (
-                          <img
-                            alt={chain.name ?? 'Chain icon'}
-                            src={chain.iconUrl}
-                            style={{ width: 12, height: 12 }}
-                          />
-                        )}
-                      </div>
-                    )}
                     {chain.name}
                   </button>
 
-                  <button onClick={openAccountModal} type="button">
-                    {account.displayName}
-                    {account.displayBalance ? ` (${account.displayBalance})` : ''}
-                  </button>
+                  <div className={styles.creds} onClick={openAccountModal}>
+                    <div>{account.displayBalance ? `${account.displayBalance}` : ''}</div>
+                    <div className={styles.address}>
+                      <Avatar
+                        size={18}
+                        name={account.address}
+                        variant="bauhaus"
+                        colors={['#92A1C6', '#146A7C', '#F0AB3D', '#C271B4', '#C20D90']}
+                      />
+                      <div>{account.displayName}</div>
+                    </div>
+                  </div>
                 </div>
               );
             })()}

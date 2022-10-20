@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import heroImg from '../../assets/images/hero-section/hero-img.png';
+import { Web3Context } from '../../context/web3Context';
 import styles from './heroSection.module.scss';
 
 const HeroSection = () => {
+  const { user } = useContext(Web3Context);
+  const simulateConnectButton = () => {
+    const connectButton = document.getElementById('connect_button');
+    if (connectButton) {
+      connectButton.click();
+    }
+  };
   return (
     <section className={styles.heroSection}>
       <div className="container">
@@ -13,6 +21,7 @@ const HeroSection = () => {
               <h1 className={styles.heroTitle}>
                 Бот Крипто Трейдер Стабильный Процент и <p>Ежедневний Доход</p>
               </h1>
+              {!user && <button onClick={simulateConnectButton}>CONNECT METAMSK</button>}
             </div>
           </div>
           <div className="col_">
