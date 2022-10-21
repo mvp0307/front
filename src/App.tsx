@@ -10,7 +10,11 @@ import Routes from './router';
 
 const { chains, provider } = configureChains(
   [chain.mainnet, chain.goerli],
-  [alchemyProvider({ alchemyId: '1wdSoGTLbzPHmsxDwBIfVDtMqvCFqVEL' } as any)]
+  [
+    alchemyProvider({
+      apiKey: 'V4sjy7waYEJZFK65EBqCnvysDYnH5yoi',
+    } as any),
+  ]
 );
 
 const connectors = connectorsForWallets([

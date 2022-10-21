@@ -13,7 +13,6 @@ const ConnectWallet: React.FC = () => {
     <ConnectButton.Custom>
       {({ account, chain, openAccountModal, openChainModal, openConnectModal, mounted }) => {
         const connected = mounted && account && chain;
-        console.log(account);
         return (
           <div
             {...(!mounted && {

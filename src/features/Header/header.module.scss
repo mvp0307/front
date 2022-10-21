@@ -26,5 +26,23 @@
                 }
             }
         }
+        .settings{
+            width: 28px;
+            height: 28px;
+            background-color: red;
+            background: rgba(67, 173, 154, 0.12);
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40px;
+            svg{
+                animation: 10s rotate360 infinite linear;
+                cursor: pointer;
+            }
+        }
     }
 }
+@keyframes rotate360 {
+    to { transform: rotate(360deg); }
+  }

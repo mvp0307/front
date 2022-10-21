@@ -47,13 +47,17 @@ const Routes: React.FC = () => {
     }
   }, [address]);
   useEffect(() => {
+    if (isConnecting) {
+      setConnectOrReconnect('pending');
+    }
+  }, [isConnecting]);
+  useEffect(() => {
     if (!isConnecting && !isReconnecting) {
       if (!isConnected) {
         setConnectOrReconnect('fulfield');
       }
     }
   }, [isReconnecting, isConnecting]);
-
   return (
     <BrowserRouter>
       <ScrollToTop>
