@@ -5,6 +5,7 @@ import Avatar from 'boring-avatars';
 import React from 'react';
 
 import MetamaskSvg from '../../assets/svgs/MetamaskSvg';
+import { AVATAR } from '../../constants/avatart';
 import styles from './connectWallet.module.scss';
 
 const ConnectWallet: React.FC = () => {
@@ -60,10 +61,10 @@ const ConnectWallet: React.FC = () => {
                     <div>{account.displayBalance ? `${account.displayBalance}` : ''}</div>
                     <div className={styles.address}>
                       <Avatar
-                        size={18}
+                        size={AVATAR.size}
                         name={account.address}
-                        variant="bauhaus"
-                        colors={['#92A1C6', '#146A7C', '#F0AB3D', '#C271B4', '#C20D90']}
+                        variant={AVATAR.variant as any}
+                        colors={AVATAR.colorScheme}
                       />
                       <div>{account.displayName}</div>
                     </div>
