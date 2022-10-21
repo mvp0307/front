@@ -30,6 +30,7 @@ const wagmiClient = createClient({
   provider,
 });
 const App = () => {
+  console.log(process.env.REACT_APP_ALCHEMY_API_KEY);
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <WagmiConfig client={wagmiClient}>
