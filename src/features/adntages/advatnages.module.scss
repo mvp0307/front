@@ -1,0 +1,100 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.advantagesSection {
+    margin-top: 130px;
+    .advantageWrapper {
+        .mainRow {
+            @include flexRow(40, 2, center);
+            .leftCustomCol {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+            .rightCustomCol {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+        }
+        .advantageRow {
+            max-width: 91%;
+            @include flexRow(60, 2, flex-start);
+            :global {
+                .col_ {
+                    &:nth-child(even) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        .advatnageItem {
+            position: relative;
+            margin-bottom: 14px;
+            padding-left: 40px;
+            padding-top: 95px;
+            .advatnageCount {
+                color: rgba(189, 206, 198, 0.2);
+                @include fontRem(160, 600, 195);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .advatnageBlock {
+                background-color: $white;
+                padding: 24px 60px 34px 34px;
+                box-shadow: 0px 17px 36px -12px rgba(14, 114, 102, 0.1);
+                border-radius: 12px;
+                z-index: 1;
+                position: relative;
+                height: 208px;
+                .advatnageIcon {
+                    margin-bottom: 18px;
+                }
+                .advantageText {
+                    h3 {
+                        @include fontRem(20, 700, 27);
+                        color: $darken;
+                    }
+                    p {
+                        &:not(.advatnagePrice) {
+                            margin-top: 5px;
+                            @include fontRem(14, 500, 19);
+                        }
+                    }
+                    .advatnagePrice {
+                        @include fontRem(18, 800, 25);
+                        color: $orage;
+                    }
+                }
+                .advantageBtn {
+                    position: absolute;
+                    right: -20px;
+                    bottom: 6px;
+                    width: fit-content;
+                    @include fontRem(14, 600, 19);
+                    @include flex-center-vert;
+                    @include buttonNulled;
+                    padding: 8px 12px;
+                    background: $gradient;
+                    box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+                    border-radius: 10px 10px 0px 10px;
+                    color: $white;
+                }
+            }
+        }
+        .advantageTexts {
+            max-width: 393px;
+            width: 100%;
+            .titleBlock {
+                margin-bottom: 13px;
+            }
+            .outlinedButton {
+                width: fit-content;
+                margin-top: 16px;
+                color: $green;
+                border-radius: 12px 12px 0px 12px;
+                border: 1px solid $green;
+                padding: 12px 16px;
+            }
+        }
+    }
+}

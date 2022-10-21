@@ -1,0 +1,36 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.howItWorksSection {
+    margin-top: 66px;
+    .titleBlock {
+        text-align: center;
+        max-width: 552px;
+        margin: 0 auto 44px;
+    }
+    .itemsBlock {
+        .itemsRow {
+            @include flexRow(24, 4, flex-start);
+        }
+        .item {
+            background-color: $white;
+            padding: 30px 52px 20px 34px;
+            box-shadow: 0px 17px 36px -12px rgba(14, 114, 102, 0.1);
+            border-radius: 12px;
+            .itemIcon {
+                margin-bottom: 26px;
+            }
+            .itemText {
+                h3 {
+                    @include fontRem(22, 600, 33);
+                    margin-bottom: 7px;
+                    color: $darken;
+                }
+                p {
+                    @include fontRem(16, 500, 22);
+                    color: rgba($darken, 0.8);
+                }
+            }
+        }
+    }
+}
