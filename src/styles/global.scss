@@ -1,3 +1,6 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
 html,
 body {
   height: 100%;
@@ -13,13 +16,13 @@ body {
   font-weight: 500;
   font-size: 1rem;
   line-height: 24px;
-  div{
+  div {
     [class="iekbcc0 ju367v4i"] {
       display: none;
-  }
-  [class="iekbcc0 ju367v4w"] {
-    display: none;
-  }
+    }
+    [class="iekbcc0 ju367v4w"] {
+      display: none;
+    }
   }
 }
 
@@ -123,7 +126,8 @@ legend {
   flex-direction: column;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url('../assets/images/main-bg.png');
+  background-image: url("../assets/images/main-bg.png");
+  background-color: #fbfbfb;
 }
 
 main {
@@ -135,4 +139,25 @@ main {
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.title_prefix {
+  @include fontRem(16, 600, 19);
+  color: $orage;
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+.title_section {
+  @include fontRem(32, 800, 44);
+  color: $darken;
+}
+.outlinedButton {
+  color: $green;
+  border-radius: 12px 12px 0px 12px;
+  border: 1px solid $green;
+  width: fit-content;
+  padding: 12px 16px;
+  svg {
+    margin-right: 12px;
+  }
 }

@@ -1,0 +1,17 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.footer {
+    margin-top: 63px;
+    background-color: $black;
+    .footerRow {
+        padding: 33px 0;
+        @include flex-center-vert;
+        justify-content: space-between;
+        p,
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
