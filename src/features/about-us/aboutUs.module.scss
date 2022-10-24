@@ -1,0 +1,40 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.aboutusSection {
+    margin-top: 200px;
+    .aboutRow {
+        @include flexRow(20, 2, flex-start);
+    }
+    .titleBlock {
+        margin-bottom: 45px;
+        max-width: 461px;
+        width: 100%;
+    }
+    .textItem {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        * {
+            @include fontRem(16, 500, 22);
+            color: $darken;
+        }
+        a {
+            display: inline-block;
+            color: $green;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: 0.3s;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        height: 438px;
+        border-radius: 16px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}

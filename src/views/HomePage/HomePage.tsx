@@ -1,5 +1,7 @@
+import AboutUs from '../../features/about-us/AboutUs';
 import Advantages from '../../features/adntages/Advantages';
 import Banner from '../../features/banner/Banner';
+import ContactUs from '../../features/cotact-us/ContactUs';
 import Footer from '../../features/Footer/Footer';
 import Header from '../../features/Header/Header';
 import HeroSection from '../../features/hero-section/HeroSection';
@@ -14,6 +16,8 @@ const HomePage: React.FC = () => {
         <Banner />
         <HowItWorks />
         <Advantages />
+        <AboutUs />
+        <ContactUs />
       </main>
       <Footer />
     </div>
