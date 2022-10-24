@@ -1,7 +1,6 @@
 @import "/src/styles/mixins";
 @import "/src/styles/variables";
 
-
 .connectWallerButton {
     @include flex-center-vert;
     @include buttonNulled;
@@ -10,21 +9,25 @@
     color: $green;
     border-radius: 12px 12px 0px 12px;
     border: 1px solid $green;
+    transition: 0.3s;
     svg {
         margin-right: 12px;
     }
+    &:hover {
+        background-color: rgba(67, 173, 154, 0.16);
+    }
 }
-.creds{
+.creds {
     width: 215px;
     height: 46px;
-    border: 1px solid #43AD9A;
+    border: 1px solid #43ad9a;
     border-radius: 12px 12px 0px 12px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
-    color: #43AD9A;
-    .address{
+    color: #43ad9a;
+    .address {
         display: flex;
         margin-left: 15px;
         height: 38px;
@@ -33,6 +36,6 @@
         border-radius: 8px 8px 0px 8px;
         align-items: center;
         justify-content: space-around;
-        color: #43AD9A;
+        color: #43ad9a;
     }
 }
