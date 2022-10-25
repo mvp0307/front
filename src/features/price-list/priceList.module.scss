@@ -1,0 +1,91 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.priceListSectin {
+    margin-top: 110px;
+    .titleBlock {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .pricelistRow {
+        @include flexRow(24, 4, flex-start);
+        .pricelistItem {
+            padding: 16px 16px 24px;
+            box-shadow: 0px 17px 38px -12px rgba(14, 114, 102, 0.14);
+            border-radius: 12px;
+            background-color: $white;
+            .itemTitle {
+                text-align: center;
+                color: rgba($darken, 0.8);
+                margin-bottom: 22px;
+                @include fontRem(20, 700, 27);
+            }
+            .itemPrice {
+                text-align: center;
+                @include fontRem(28, 700, 38);
+                color: $green;
+                margin-bottom: 45px;
+            }
+            .percentList {
+                list-style-type: none;
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                    span {
+                        &:first-child {
+                            @include fontRem(14, 500, 19);
+                        }
+                        &:last-child {
+                            @include fontRem(18, 600, 25);
+                        }
+                    }
+                }
+            }
+            .itemButtons {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                button {
+                    @include flex-center-vert;
+                    @include buttonNulled;
+                    width: 100%;
+                    &.outlinedButton {
+                        color: $green;
+                        border-radius: 12px 12px 0px 12px;
+                        border: 1px solid $green;
+                        padding: 12px 16px;
+                        transition: 0.3s;
+                        cursor: pointer;
+                        &:hover {
+                            background: rgba(67, 173, 154, 0.16);
+                        }
+                    }
+                    &.filledButton {
+                        @include flex-center-vert;
+                        @include buttonNulled;
+                        justify-content: center;
+                        padding: 12px 16px;
+                        background: $gradient;
+                        box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+                        border-radius: 12px 12px 0px 12px;
+                        color: $white;
+                        transition: 0.3s;
+                        &:hover {
+                            background: $gradientReverse;
+                        }
+                    }
+                }
+            }
+            &.pricelistItemSelected {
+                background: #f7fffc;
+                border: 2px solid rgba(55, 168, 152, 0.24);
+                box-shadow: 0px 17px 42px -12px rgba(14, 114, 102, 0.3);
+            }
+        }
+    }
+}
