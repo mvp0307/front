@@ -13,5 +13,10 @@
             color: $white;
             text-decoration: none;
         }
+        .linksWrapper {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
     }
 }

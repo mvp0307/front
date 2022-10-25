@@ -19,12 +19,26 @@
                 max-width: 407px;
             }
             .socialShare {
-                margin-top: auto;   
+                margin-top: auto;
                 @include flex-center-vert;
                 gap: 15px;
+                a {
+                    svg {
+                        rect {
+                            fill-opacity: 0.12;
+                            transition: 0.3s;
+                        }
+                    }
+                    &:hover {
+                        svg {
+                            rect {
+                                fill-opacity: 0.32;
+                            }
+                        }
+                    }
+                }
             }
         }
-        
 
         .formWrapper {
             width: 100%;
@@ -85,6 +99,9 @@
                 margin-top: 8px;
                 text-align: center;
                 justify-content: center;
+                &:hover {
+                    background: $gradientReverse;
+                }
             }
         }
     }

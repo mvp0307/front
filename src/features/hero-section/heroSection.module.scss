@@ -59,7 +59,9 @@
                 svg {
                     margin-right: 12px;
                 }
-               
+               &:hover {
+                background: $gradientReverse;
+               }
             }
         }
     }

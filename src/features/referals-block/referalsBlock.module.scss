@@ -1,0 +1,121 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.referalsSection {
+    margin-top: 110px;
+    .referalsBlock {
+        padding: 42px 32px 32px;
+        background-color: $white;
+        box-shadow: 0px 17px 36px -12px rgba(14, 114, 102, 0.1);
+        border-radius: 12px;
+        .referalsTitle {
+            @include fontRem(28, 700, 38);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            button {
+                display: flex;
+                @include buttonNulled;
+            }
+        }
+        .currentCode {
+            @include flexRow(20, 2, center);
+            .codeBlock {
+                display: flex;
+                gap: 10px;
+                background-color: $white;
+                box-shadow: 2px 12px 32px -12px rgba(14, 114, 102, 0.06);
+                border-radius: 12px;
+                padding: 16px;
+                align-items: center;
+                p {
+                    @include textShorten(1);
+                    @include fontRem(16, 600, 22);
+                }
+                button {
+                    margin-left: auto;
+                    @include buttonNulled;
+                    svg {
+                        min-width: 18px;
+                        min-height: 18px;
+                    }
+                }
+            }
+        }
+        .inviteBlock {
+            margin-top: 56px;
+            @include flexRow(20, 2, center);
+            .formItem {
+                display: flex;
+                align-items: flex-end;
+
+                .inputWrapper {
+                    width: 100%;
+                }
+                label {
+                    display: block;
+                    cursor: pointer;
+                    margin-bottom: 8px;
+                    @include fontRem(16, 600, 19);
+                    letter-spacing: 0.05em;
+                    color: $green;
+                }
+                input {
+                    background: rgba(67, 173, 154, 0.12);
+                    border: 1px solid rgba(67, 173, 154, 0.32);
+                    border-radius: 12px;
+                    height: 46px;
+                    max-width: 360px;
+                    width: 100%;
+                    padding: 12px 14px;
+                    @include fontRem(16, 500, 14);
+                    outline: none;
+                    color: $darken;
+                    &::placeholder {
+                        color: rgba(1, 28, 24, 0.4);
+                    }
+                    &:disabled {
+                        color: rgba(1, 28, 24, 0.4);
+                    }
+                }
+                .errorMsg {
+                    margin-top: 8px;
+                    @include fontRem(16, 600, 19);
+                    color: $red;
+                }
+                &.unvalidated {
+                    input {
+                        border: 1px solid $red;
+                    }
+                }
+                .submitBtn {
+                    flex: 0 0 112px;
+                    height: 40px;
+                    width: fit-content;
+                    @include flex-center-vert;
+                    @include buttonNulled;
+                    padding: 10px 34px;
+                    background: $gradient;
+                    box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+                    border-radius: 12px 12px 0px 12px;
+                    color: $white;
+                    transition: 0.3s;
+                    margin-left: auto;
+                    text-align: center;
+                    justify-content: center;
+                    &:hover {
+                        background: $gradientReverse;
+                    }
+                    &:disabled {
+                        background: #bdcec6;
+                        cursor: default;
+                        box-shadow: none;
+                        &:hover {
+                            background: #bdcec6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
