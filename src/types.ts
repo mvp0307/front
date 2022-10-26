@@ -4,3 +4,4 @@ export enum ERoutes {
   Map = '/map',
   Dashboard = '/dashboard',
 }
+export type TModalTypes = 'add-money';

@@ -1,24 +1,32 @@
 /* eslint-disable no-unused-vars */
 import React, { createContext, ReactNode, useMemo, useState } from 'react';
 
-interface MainContextInterface {
-  data: any;
-  setData: (currentUser: any) => void;
-}
+import { TModalTypes } from '../types';
 
-export const MainContext = createContext<MainContextInterface | null>(null);
+interface MainContextInterface {
+  modal: TModalTypes | '';
+  setModal: (modal: TModalTypes | '') => void;
+}
+const initialValues = {
+  modal: '',
+  setModal: () => null,
+};
+
+export const MainContext = createContext<MainContextInterface>(
+  initialValues as MainContextInterface
+);
 interface IMainProvider {
   children: ReactNode;
 }
 
 const MainProvider: React.FC<IMainProvider> = ({ children }) => {
-  const [data, setData] = useState<any>(null);
+  const [modal, setModal] = useState<TModalTypes | ''>('');
   const values = useMemo(() => {
     return {
-      data,
-      setData,
+      modal,
+      setModal,
     };
-  }, [data]);
+  }, [modal]);
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 };
 

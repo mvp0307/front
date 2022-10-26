@@ -5,15 +5,15 @@ import { useAccount, useBalance } from 'wagmi';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import { Web3Context } from './context/web3Context';
+import ModalWrapper from './features/modal/modal';
 import { ERoutes } from './types';
 import Dashboard from './views/Dashboard/Dashboard';
 import HomePage from './views/HomePage/HomePage';
 import Map from './views/Map/Map';
 
 const Routes: React.FC = () => {
-  const { connectOrReconnect, user } = useContext(Web3Context);
   const [address, setAddress] = useState<string>('');
-  const { setUser, setConnectOrReconnect } = useContext(Web3Context);
+  const { setUser, setConnectOrReconnect, connectOrReconnect, user } = useContext(Web3Context);
   const { isConnected, isReconnecting, isConnecting } = useAccount({
     onConnect({ address, connector, isReconnected }) {
       console.log('Connected', { address, connector, isReconnected });
@@ -60,6 +60,7 @@ const Routes: React.FC = () => {
   }, [isReconnecting, isConnecting]);
   return (
     <BrowserRouter>
+      <ModalWrapper />
       <ScrollToTop>
         {connectOrReconnect !== 'pending' ? (
           <Switch>
