@@ -6,6 +6,7 @@ import Footer from '../../features/Footer/Footer';
 import Header from '../../features/Header/Header';
 import HeroSection from '../../features/hero-section/HeroSection';
 import HowItWorks from '../../features/how-it-works/HowItWorks';
+import RoadMap from '../../features/road-map/RoadMap';
 
 const HomePage: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage: React.FC = () => {
         <HowItWorks />
         <Advantages />
         <AboutUs />
+        <RoadMap />
         <ContactUs />
       </main>
       <Footer />
