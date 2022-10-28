@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { MainContext } from '../../context/mainContext';
 import Footer from '../../features/Footer/Footer';
 import Header from '../../features/Header/Header';
+import InvestmentState from '../../features/investment-state/InvestmentState';
 import InvidtedUser from '../../features/invited-users/InvidtedUser';
 import PriceList from '../../features/price-list/PriceList';
 import ReferalsBlock from '../../features/referals-block/ReferalsBlock';
@@ -16,10 +17,10 @@ const Dashboard: React.FC = () => {
       <Header />
       <div onClick={() => setModal('add-money')}>Add money Modal</div>
       {IS_GROSS ? (
-        <div>
-          <div>Vervi ktor</div>
+        <>
+          <InvestmentState />
           <div>Gross Line</div>
-        </div>
+        </>
       ) : (
         <PriceList />
       )}
