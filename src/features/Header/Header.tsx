@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 
+import CaretSvg from '../../assets/svgs/CaretSvg';
 import Logo from '../../assets/svgs/Logo';
+import PureAwardSvg from '../../assets/svgs/PureAwardSvg';
 import { Settings } from '../../assets/svgs/Settings';
 import ConnectWallet from '../../components/ConnectWallet/ConnectWallet';
 import { Web3Context } from '../../context/web3Context';
@@ -19,9 +21,36 @@ const Header: React.FC = () => {
             <a className={styles.menuItem} href="">
               Gross
             </a>
-            <a className={styles.menuItem} href="">
-              Investment
-            </a>
+            {/* ul-ին ավելանումա ${styles.opened} կլասսը, ու թաֆվող մենյուն երևումա */}
+            <ul className={`${styles.headerDropDown} ${styles.menuItem}`}>
+              <li>
+                <div className={styles.dropdownControl}>
+                  Investment <CaretSvg />
+                </div>
+                <ul className={styles.dropList}>
+                  <li>
+                    <a className={styles.dropDownItems} href="">
+                      Minor
+                    </a>
+                  </li>
+                  <li>
+                    <a className={styles.dropDownItems} href="">
+                      Major
+                    </a>
+                  </li>
+                  <li>
+                    <a className={styles.dropDownItems} href="">
+                      Grand
+                    </a>
+                  </li>
+                  <li>
+                    <a className={styles.dropDownItems} href="">
+                      <PureAwardSvg /> Gross
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
             {user && (
               <>
                 <a className={styles.menuItem} href="">
