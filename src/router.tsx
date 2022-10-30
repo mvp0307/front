@@ -8,7 +8,9 @@ import { Web3Context } from './context/web3Context';
 import ModalWrapper from './features/modal/modal';
 import { ERoutes } from './types';
 import Dashboard from './views/Dashboard/Dashboard';
+import Gross from './views/Gross/Gross';
 import HomePage from './views/HomePage/HomePage';
+import Investitions from './views/Investitions/Investitions';
 import Map from './views/Map/Map';
 
 const Routes: React.FC = () => {
@@ -74,6 +76,12 @@ const Routes: React.FC = () => {
             </Route>
             <Route exact path={`${ERoutes.Home}`}>
               <HomePage />
+            </Route>
+            <Route exact path={`${ERoutes.Investitions}`}>
+              <Investitions />
+            </Route>
+            <Route exact path={`${ERoutes.Gross}`}>
+              <Gross />
             </Route>
             <Route>404 Page</Route>
           </Switch>
