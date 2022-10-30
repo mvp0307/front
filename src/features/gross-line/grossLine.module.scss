@@ -1,0 +1,100 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.grossLineSection {
+    margin-top: 48px;
+    background-color: $darken;
+    padding: 28px 0 75px;
+    .grosslineItem {
+        .grossLineTitle {
+            @include fontRem(24, 700, 33);
+            color: $white;
+            margin-bottom: 8px;
+        }
+        .grossLineSubTitle {
+            @include fontRem(16, 500, 22);
+            color: $white;
+            margin-bottom: 35px;
+        }
+        .lineWrap {
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+            align-items: flex-end;
+            > p {
+                @include fontRem(18, 800, 25);
+                color: rgba($color: $green, $alpha: 0.64);
+                transform: translateX(calc(50% - 30px));
+            }
+            svg {
+                rect {
+                    fill: transparent;
+                }
+            }
+        }
+        .lineItem {
+            position: relative;
+            display: flex;
+            background: rgba(67, 173, 154, 0.18);
+            border-radius: 10px;
+            width: calc(100% - 15px);
+            align-self: flex-start;
+            height: 11px;
+            &::before,
+            &::after {
+                content: "";
+                @include absoluteCenter(vertical);
+                background: #15473f;
+                width: 19px;
+                height: 19px;
+                border-radius: 50px;
+                z-index: 1;
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+            &.leftFill {
+                &::before {
+                    background: linear-gradient(180deg, #82e2c0 0%, #2b9e90 100%);
+                }
+            }
+            &.bothFill {
+                &::before {
+                    background: linear-gradient(180deg, #82e2c0 0%, #2b9e90 100%);
+                }
+                &::after {
+                    background: linear-gradient(180deg, #82e2c0 0%, #2b9e90 100%);
+                }
+            }
+            .lineFill {
+                border-radius: 10px;
+                position: relative;
+                width: 50%;
+                background-color: $green;
+                .linePrice {
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    padding-top: 24px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 1px;
+                        background-color: rgba(67, 173, 154, 0.64);
+                        height: calc(100% - 20px);
+                    }
+                    p {
+                        @include fontRem(14, 500, 19);
+                        color: $green;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
