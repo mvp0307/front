@@ -1,0 +1,23 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+
+.howToGrossSection {
+    margin-top: 100px;
+    .howToGrossRow {
+        @include flexRow(24, 2, center);
+        .grossLeftBlock {
+            max-width: 508px;
+            .titleBlock {
+                margin-bottom: 32px;
+            }
+            .howtoGrossText {
+                @include fontRem(16, 400, 22);
+                color: $darken;
+            }
+        }
+        .heroImage {
+            text-align: right;
+        }
+    }
+}
