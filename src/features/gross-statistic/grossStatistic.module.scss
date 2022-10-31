@@ -1,0 +1,88 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.grossStatisticSection {
+    margin-top: 60px;
+    .grossTitle {
+        text-align: center;
+        @include fontRem(24, 700, 33);
+        margin-bottom: 64px;
+    }
+    .grossRow {
+        @include flexRow(24, 2);
+        .grossItem {
+            @include flex-column;
+            padding: 6px 24px 24px 24px;
+            background-color: $white;
+            box-shadow: 0px 14px 36px -2px rgba(14, 114, 102, 0.1);
+            border-radius: 12px;
+            min-height: 571px;
+            height: 580px;
+            .grossHeader {
+                padding-bottom: 18px;
+                border-bottom: 1px solid rgba(67, 173, 154, 0.32);
+            }
+            .smallTitlte {
+                margin-top: 18px;
+                margin-bottom: 14px;
+                @include fontRem(20, 700, 24);
+            }
+            .subText {
+                @include fontRem(16, 600, 22);
+                margin-bottom: 12px;
+                max-width: 437px;
+            }
+            .subTextWrapper {
+                margin-top: 12px;
+                .withPercentText {
+                    flex-direction: column;
+                }
+            }
+            .withPercentText {
+                margin-top: 8px;
+                @include fontRem(16, 400, 22);
+                color: rgba(1, 28, 24, 0.8);
+                display: flex;
+                justify-content: space-between;
+                .percentItem {
+                    margin-left: 10px;
+                    color: $green;
+                    @include fontRem(16, 600, 19);
+                }
+                .subText {
+                    margin-bottom: 0;
+                }
+            }
+            .grossBody {
+                .smallTitlte {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+        .listWrapper {
+            &.lastWrapper {
+                margin-top: auto;
+            }
+            .list {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    span {
+                        @include fontRem(16, 400, 19);
+                        color: $black;
+                        &:last-child {
+                            margin-left: 10px;
+                            color: $green;
+                            text-align: right;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
