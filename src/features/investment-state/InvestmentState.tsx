@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import MoneyStatisticSvg from '../../assets/svgs/MoneyStatisticSvg';
 import StatisticSvg from '../../assets/svgs/StatisticSvg';
 import WithDrawSvg from '../../assets/svgs/WithDrawSvg';
+import { MainContext } from '../../context/mainContext';
 import styles from './investmentState.module.scss';
 
 const InvestmentState = () => {
+  const { setModal } = useContext(MainContext);
   return (
     <section className={styles.investmentState}>
       <div className="container">
@@ -86,7 +88,7 @@ const InvestmentState = () => {
                         <p>Total:</p>
                         <p>$ 130</p>
                       </div>
-                      <button>Add</button>
+                      <button onClick={() => setModal('add-money')}>Add</button>
                     </div>
                   </div>
                   <div className="col_">
@@ -94,7 +96,7 @@ const InvestmentState = () => {
                       <h3 className={styles.contentTitle}>You Have Withdrawed</h3>
 
                       <p className={styles.noResultItem}>No Result</p>
-                      <button>Widraw</button>
+                      <button onClick={() => setModal('withdraw-money')}>Widraw</button>
                     </div>
                   </div>
                 </div>

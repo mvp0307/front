@@ -3,6 +3,7 @@ import React, { useEffect, useMemo } from 'react';
 import { useContext } from 'react';
 import Modal from 'react-modal';
 
+import { X } from '../../assets/svgs/X';
 import { MODALS } from '../../constants/modals';
 import { MainContext } from '../../context/mainContext';
 import { TModalTypes } from '../../types';
@@ -45,6 +46,12 @@ const ModalWrapper: React.FC = () => {
       style={customStyles}
       contentLabel="Example Modal"
     >
+      <div
+        onClick={() => setModal('')}
+        style={{ position: 'absolute', right: '24px', cursor: 'pointer' }}
+      >
+        <X />
+      </div>
       {modal && <Component />}
     </Modal>
   );

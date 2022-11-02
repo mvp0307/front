@@ -40,8 +40,8 @@ const ConnectWallet: React.FC = () => {
 
               if (chain.unsupported) {
                 return (
-                  <button onClick={openChainModal} type="button">
-                    Wrong network
+                  <button className={styles.wrong} onClick={openChainModal} type="button">
+                    Wrong network !
                   </button>
                 );
               }

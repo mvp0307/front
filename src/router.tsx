@@ -1,7 +1,9 @@
+/* eslint-disable no-constant-condition */
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useAccount, useBalance } from 'wagmi';
 
+import PageLoader from './components/PageLoader/PageLoader';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import { Web3Context } from './context/web3Context';
@@ -86,7 +88,7 @@ const Routes: React.FC = () => {
             <Route>404 Page</Route>
           </Switch>
         ) : (
-          <div>Loading...</div>
+          <PageLoader />
         )}
       </ScrollToTop>
     </BrowserRouter>
