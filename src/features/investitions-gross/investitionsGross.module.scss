@@ -1,0 +1,19 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.investitionsGrossSection {
+    margin-top: 65px;
+    .grossRow {
+        @include flexRow(32, 2, center);
+        .grossTexts {
+            .grossTitle {
+                @include fontRem(24, 700, 33);
+                margin-bottom: 32px;
+            }
+            .grossText {
+                max-width: 467px;
+                @include fontRem(16, 400, 22);
+            }
+        }
+    }
+}
