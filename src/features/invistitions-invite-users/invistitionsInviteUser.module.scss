@@ -1,0 +1,61 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.invisitionsInviteSection {
+    margin-top: 80px;
+    .inviteRow {
+        @include RowItems(80, flex-start);
+        .inviteTexts {
+            .inviteTitle {
+                @include fontRem(24, 700, 33);
+                margin-bottom: 32px;
+            }
+            .inviteWithLink {
+                @include fontRem(16, 400, 22);
+                max-width: 446px;
+                margin-bottom: 16px;
+                a {
+                    text-decoration: none;
+                    color: $green;
+                }
+            }
+            .text {
+                @include fontRem(16, 400, 22);
+                max-width: 515px;
+                margin-bottom: 12px;
+            }
+            .fromToBlock {
+                margin-top: 26px;
+                background-color: $white;
+                box-shadow: 0px 14px 36px -2px rgba(14, 114, 102, 0.1);
+                border-radius: 12px;
+                padding: 12px 24px;
+                h3 {
+                    @include fontRem(16, 600, 19);
+                    color: $darken;
+                    margin-bottom: 12px;
+                }
+                .fromToItem {
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+                    .fromToRow {
+                        @include RowItems(10, flex-end);
+                        justify-content: space-between;
+                        .side {
+                            p {
+                                &:first-child {
+                                    @include fontRem(16, 400, 22);
+                                }
+                            }
+                            .sideNumber {
+                                @include fontRem(20, 600, 27);
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
