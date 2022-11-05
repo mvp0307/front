@@ -3,32 +3,60 @@
 
 .howItWorksSection {
     margin-top: 66px;
+    @media all and (max-width: 767.98px) {
+        margin-top: 48px;
+    }
     .titleBlock {
         text-align: center;
         max-width: 552px;
         margin: 0 auto 44px;
+        @media all and (max-width: 767.98px) {
+            max-width: 316px;
+        }
     }
     .itemsBlock {
         .itemsRow {
             @include flexRow(24, 4, flex-start);
+            @media all and (max-width: 1024px) {
+                @include flexRow(24, 2, flex-start);
+            }
+            @media all and (max-width: 767.98px) {
+                @include flexRow(8, 2, flex-start);
+            }
         }
         .item {
             background-color: $white;
             padding: 30px 52px 20px 34px;
             box-shadow: 0px 17px 36px -12px rgba(14, 114, 102, 0.1);
             border-radius: 12px;
+            @media all and (max-width: 1024px) {
+                margin-bottom: 24px;
+            }
+            @media all and (max-width: 767.98px) {
+                padding: 24px 12px 35px;
+                margin-bottom: 12px;
+            }
             .itemIcon {
                 margin-bottom: 26px;
+                @media all and (max-width: 767.98px) {
+                    margin-bottom: 24px;
+                }
             }
             .itemText {
                 h3 {
                     @include fontRem(22, 600, 33);
                     margin-bottom: 7px;
                     color: $darken;
+                    @media all and (max-width: 767.98px) {
+                        @include fontRem(16, 600, 25);  
+                    }
                 }
                 p {
                     @include fontRem(16, 500, 22);
                     color: rgba($darken, 0.8);
+                    @media all and (max-width: 767.98px) {
+                        @include fontRem(12, 600, 16);  
+                    }
                 }
             }
         }

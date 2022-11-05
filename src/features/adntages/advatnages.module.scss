@@ -3,25 +3,54 @@
 
 .advantagesSection {
     margin-top: 130px;
+    @media all and (max-width: 1024px) {
+        margin-top: 64px;
+    }
     .advantageWrapper {
+        @media all and (max-width: 767.98px) {
+            overflow: hidden;
+        }
         .mainRow {
             @include flexRow(40, 2, center);
+            @media all and (max-width: 1024px) {
+                flex-direction: column-reverse;
+            }
             .leftCustomCol {
                 flex: 0 0 60%;
                 max-width: 60%;
+                @media all and (max-width: 1024px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
             }
             .rightCustomCol {
                 flex: 0 0 40%;
                 max-width: 40%;
+                @media all and (max-width: 1024px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    text-align: center;
+                }
             }
         }
         .advantageRow {
             max-width: 91%;
             @include flexRow(60, 2, flex-start);
+            @media all and (max-width: 1024px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media all and (max-width: 767.98px) {
+                max-width: calc(100% + 6px);
+                @include flexRow(12, 2, flex-start);
+            }
             :global {
                 .col_ {
                     &:nth-child(even) {
                         margin-top: 40px;
+                        @media all and (max-width: 767.98px) {
+                            margin-top: 0;
+                        }
                     }
                 }
             }
@@ -31,12 +60,19 @@
             margin-bottom: 14px;
             padding-left: 40px;
             padding-top: 95px;
+            @media all and (max-width: 767.988px) {
+                padding-left: 20px;
+            }
             .advatnageCount {
                 color: rgba(189, 206, 198, 0.2);
                 @include fontRem(160, 600, 195);
                 position: absolute;
                 top: 0;
                 left: 0;
+                @media all and (max-width: 767.98px) {
+                    @include fontRem(140, 600, 171);
+                    top: -25px;
+                }
             }
             .advatnageBlock {
                 background-color: $white;
@@ -46,6 +82,11 @@
                 z-index: 1;
                 position: relative;
                 height: 208px;
+                @media all and (max-width: 767.98px) {
+                    min-height: 221px;
+                    height: auto;
+                    padding: 24px 12px;
+                }
                 .advatnageIcon {
                     margin-bottom: 18px;
                 }
@@ -53,16 +94,25 @@
                     h3 {
                         @include fontRem(20, 700, 27);
                         color: $darken;
+                        @media all and (max-width: 767.98px) {
+                            @include fontRem(16, 700, 22);
+                        }
                     }
                     p {
                         &:not(.advatnagePrice) {
                             margin-top: 5px;
                             @include fontRem(14, 500, 19);
+                            @media all and (max-width: 767.98px) {
+                                @include fontRem(12, 700, 16);
+                            }
                         }
                     }
                     .advatnagePrice {
                         @include fontRem(18, 800, 25);
                         color: $orange;
+                        @media all and (max-width: 767.98px) {
+                            @include fontRem(16, 800, 22);
+                        }
                     }
                 }
                 .advantageBtn {
@@ -81,14 +131,32 @@
                     &:hover {
                         background: $gradientReverse;
                     }
+                    @media all and (max-width: 767.98px) {
+                        position: static;
+                        margin-top: 12px;
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
         .advantageTexts {
             max-width: 393px;
             width: 100%;
+            @media all and (max-width: 1024px) {
+                max-width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media all and (max-width: 767.98px) {
+                max-width: 300px;
+            }
             .titleBlock {
                 margin-bottom: 13px;
+                @media all and (max-width: 767.98px) {
+                    max-width: 240px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
             .outlinedButton {
                 width: fit-content;
@@ -99,6 +167,13 @@
                 padding: 12px 16px;
                 transition: 0.3s;
                 cursor: pointer;
+                @media all and (max-width: 1024px) {
+                    margin: 10px auto;
+                }
+                @media all and (max-width: 767.98px) {
+                    margin-top: 24px;
+                    margin-bottom: 25px;
+                }
                 &:hover {
                     background: rgba(67, 173, 154, 0.16);
                 }

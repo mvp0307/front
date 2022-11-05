@@ -5,19 +5,23 @@ import Logo from '../../assets/svgs/Logo';
 import PureAwardSvg from '../../assets/svgs/PureAwardSvg';
 import { Settings } from '../../assets/svgs/Settings';
 import ConnectWallet from '../../components/ConnectWallet/ConnectWallet';
+import { SCREENS } from '../../constants/screens';
 import { Web3Context } from '../../context/web3Context';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import styles from './header.module.scss';
 
 const Header: React.FC = () => {
   const { user } = useContext(Web3Context);
+  const isMobile = useMediaQuery(SCREENS.mobile);
   return (
     <header className={styles.header}>
       <div className="container">
         <nav className={styles.nav}>
-          <a href="/">
+          <a href="/" className={styles.headerLogo}>
             <Logo />
           </a>
-          <menu className={styles.menu}>
+          {/* button-ի քլքիք ժամանակ մենյուն բացվելու համար menu tag-ինա կլասս ավելանում ${styled.openedMenu} */}
+          <menu className={`${styles.menu}`}>
             <a className={styles.menuItem} href="">
               Gross
             </a>
@@ -61,13 +65,22 @@ const Header: React.FC = () => {
                 </a>
               </>
             )}
-            <ConnectWallet />
+            {!isMobile && <ConnectWallet />}
             {user && (
               <div className={styles.settings}>
                 <Settings />
               </div>
             )}
           </menu>
+          {isMobile && (
+            <div className={styles.mobileHeaderRight}>
+              <ConnectWallet />
+              {/* onClick կապում ենք button-ին, սթեյթ փոխում ենք span-ին */}
+              <button type="button" className={styles.burgerWrapper}>
+                <span className={`${styles.burgerIcon} ${styles.burgerOpened}`}></span>
+              </button>
+            </div>
+          )}
         </nav>
       </div>
     </header>

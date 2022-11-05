@@ -3,15 +3,29 @@
 
 .roadMapSection {
     margin-top: 190px;
+    @media all and (max-width: 1024px) {
+        margin-top: 60px;
+    }
     .titleBlock {
         margin: 0 auto 100px;
         max-width: 512px;
         text-align: center;
+        @media all and (max-width: 767.98px) {
+            max-width: 307px;
+            text-align: left;
+            margin-bottom: 15px;
+            margin-left: 0;
+        }
         :global {
             .title_section {
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 435px;
+                @media all and (max-width: 767.98px) {
+                    max-width: 270px;
+                    margin-left: 0;
+                    text-align: left;
+                }
             }
         }
         .titleDescription {
@@ -23,6 +37,10 @@
     .roadMapArea {
         position: relative;
         padding-top: 2px;
+        @media all and (max-width: 767.98px) {
+            padding-left: 25px;
+            padding-top: 0;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -30,20 +48,48 @@
             left: 0;
             width: 100%;
             border: 2px dashed rgba(67, 173, 154, 0.64);
+            @media all and (max-width: 767.98px) {
+                top: 0;
+                left: 5px;
+                width: 2px;
+                height: 100%;
+                border-left: 2px dashed rgba(67, 173, 154, 0.64);
+            }
         }
         .roadMapRow {
             @include RowItems(46);
+            @media all and (max-width: 1024px) {
+                @include RowItems(28);
+            }
+            @media all and (max-width: 767.98px) {
+                @include RowItems(0);
+            }
             :global {
                 col_ {
                     padding-left: 23px;
                     padding-right: 23px;
+                    @media all and (max-width: 1024px) {
+                        padding-left: 14px;
+                        padding-right: 14px;
+                    }
+                    @media all and (max-width: 767.98px) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
                 }
             }
             .roadMap_small {
                 flex: 0 0 10%;
                 max-width: 10%;
+                @media all and (max-width: 767.98px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
                 p {
                     @include fontRem(18, 600, 25);
+                    @media all and (max-width: 1024px) {
+                        @include fontRem(16, 600, 25);
+                    }
                     &::after {
                         top: -9px;
                         width: 20px;
@@ -51,14 +97,37 @@
                         background-color: $green;
                         box-shadow: 1px 2px 6px rgba(17, 22, 2, 0.16), inset -1px -1px 2px rgba(0, 0, 0, 0.12),
                             inset 1px 1px 2px rgba(255, 255, 255, 0.32);
+                        @media all and (max-width: 767.98px) {
+                            left: -27px;
+                            width: 18px;
+                            height: 18px;
+                            top: 18px;
+                        }
+                    }
+                }
+                &:first-child {
+                    p {
+                        @media all and (max-width: 767.98px) {
+                            padding-top: 0;
+                            &::after {
+                                top: 0;
+                            }
+                        }
                     }
                 }
             }
             .roadMap_normal {
                 flex: 0 0 20%;
                 max-width: 20%;
+                @media all and (max-width: 767.98px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
                 p {
                     @include fontRem(16, 500, 19);
+                    @media all and (max-width: 1024px) {
+                        @include fontRem(14, 600, 20);
+                    }
                     &::after {
                         top: -4px;
                         width: 11px;
@@ -66,6 +135,12 @@
                         background-color: $orange;
                         box-shadow: 1px 2px 6px rgba(17, 22, 2, 0.16), inset -1px -1px 2px rgba(0, 0, 0, 0.12),
                             inset 1px 1px 2px rgba(255, 255, 255, 0.32);
+                        @media all and (max-width: 767.98px) {
+                            left: -23px;
+                            width: 10px;
+                            height: 10px;
+                            top: 18px;
+                        }
                     }
                 }
             }
