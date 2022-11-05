@@ -3,8 +3,28 @@
 
 .header {
     padding: 17px 0;
+    @media all and (max-width: 767.98px) {
+        position: sticky;
+        z-index: 2;
+        top: 0;
+        background-color: $white;
+    }
     .nav {
         @include flex-center-vert;
+        .headerLogo {
+            @media all and (max-width: 1024px) {
+                svg {
+                    width: 130px;
+                }
+            }
+            @media all and (max-width: 767.98px) {
+                display: flex;
+                svg {
+                    width: 112px;
+                    height: 21px;
+                }
+            }
+        }
         .menu {
             margin-left: auto;
             @include flex-center-vert;
@@ -12,14 +32,23 @@
                 @include flex-center-vert;
                 text-decoration: none;
                 color: $dark;
+                @media all and (max-width: 767.98px) {
+                    margin-bottom: 24px;
+                }
                 &:not(:last-child) {
                     margin-right: 36px;
+                    @media all and (max-width: 1024px) {
+                        margin-right: 10px;
+                    }
                 }
                 &:last-child {
                     margin-left: 4px;
                     color: $green;
                     border-radius: 12px 12px 0px 12px;
                     border: 1px solid $green;
+                    @media all and (max-width: 767.98px) {
+                        border: 0;
+                    }
                     svg {
                         margin-right: 12px;
                     }
@@ -95,17 +124,38 @@
                     }
                 }
             }
+            @media all and (max-width: 767.98px) {
+                padding: 56px 32px;
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                z-index: 2;
+                height: 100%;
+                bottom: 0;
+                width: 60%;
+                margin: 0;
+                overflow: auto;
+                background: rgba($white, 0.8);
+                box-shadow: -15px 0px 32px rgba(14, 114, 102, 0.06);
+                backdrop-filter: blur(6px);
+                display: block;
+                &.openedMenu {
+                    right: 0;
+                }
+            }
         }
         .settings {
             width: 28px;
             height: 28px;
-            background-color: red;
             background: rgba(67, 173, 154, 0.12);
             border-radius: 4px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-left: 40px;
+            @media all and (max-width: 1024px) {
+                margin-left: 10px;
+            }
             svg {
                 animation: 10s rotate360 infinite linear;
                 cursor: pointer;
@@ -116,5 +166,63 @@
 @keyframes rotate360 {
     to {
         transform: rotate(360deg);
+    }
+}
+
+// Mobile components
+
+.mobileHeaderRight {
+    margin-left: auto;
+    @include flex-center-vert;
+
+    .burgerWrapper {
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+        @include flex-center;
+        @include buttonNulled;
+        .burgerIcon {
+            display: block;
+            position: relative;
+            width: 18px;
+            height: 2px;
+            background-color: $black;
+            border-radius: 2px;
+            &::before {
+                content: "";
+                border-radius: 2px;
+                position: absolute;
+                top: -4px;
+                left: 0;
+                width: 18px;
+                height: 2px;
+                background-color: $black;
+                transition: transform 0.3s, top 0.3s ease-in 0.3s;
+            }
+            &::after {
+                content: "";
+                border-radius: 2px;
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 18px;
+                height: 2px;
+                background-color: $black;
+                transition: transform 0.3s, top 0.3s ease-in 0.3s;
+            }
+            &.burgerOpened {
+                background-color: transparent;
+                &::before {
+                    transform: rotate(45deg);
+                    top: 0;
+                    transition: top 0.3s, transform 0.3s ease-in 0.3s;
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                    top: 0;
+                    transition: top 0.3s, transform 0.3s ease-in 0.3s;
+                }
+            }
+        }
     }
 }

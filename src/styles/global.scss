@@ -139,6 +139,10 @@ main {
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+  @media all and (max-width: 767.98px) {
+    padding: 0 16px;
+    max-width: 100%;
+  }
 }
 
 .title_prefix {
@@ -146,10 +150,20 @@ main {
   color: $orange;
   margin-bottom: 4px;
   letter-spacing: 0.05em;
+  @media all and (max-width: 767.98px) {
+    @include fontRem(14, 600, 17);
+    margin-bottom: 8px;
+  }
 }
 .title_section {
   @include fontRem(32, 800, 44);
   color: $darken;
+  @media all and (max-width: 1024px) {
+    @include fontRem(26, 800, 32);
+  }
+  @media all and (max-width: 767.98px) {
+    @include fontRem(20, 800, 27);
+  }
 }
 
 .d_modal_primaryBtn {

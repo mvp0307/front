@@ -6,9 +6,12 @@ import React from 'react';
 
 import MetamaskSvg from '../../assets/svgs/MetamaskSvg';
 import { AVATAR } from '../../constants/avatart';
+import { SCREENS } from '../../constants/screens';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import styles from './connectWallet.module.scss';
 
 const ConnectWallet: React.FC = () => {
+  const isMobile = useMediaQuery(SCREENS.mobile);
   return (
     <ConnectButton.Custom>
       {({ account, chain, openAccountModal, openChainModal, openConnectModal, mounted }) => {
@@ -33,7 +36,7 @@ const ConnectWallet: React.FC = () => {
                     type="button"
                     className={styles.connectWallerButton}
                   >
-                    <MetamaskSvg /> Connect MetaMask
+                    <MetamaskSvg /> Connect {!isMobile && 'MetaMask'}
                   </button>
                 );
               }

@@ -3,13 +3,27 @@
 
 .aboutusSection {
     margin-top: 200px;
+    @media all and (max-width: 1024px) {
+        margin-top: 120px;
+    }
+    @media all and (max-width: 767.98px) {
+        margin-top: 86px;
+    }
     .aboutRow {
         @include flexRow(20, 2, flex-start);
+        @media all and (max-width: 767.98px) {
+        @include flexRow(20, 1, flex-start);
+
+        }
     }
     .titleBlock {
         margin-bottom: 45px;
         max-width: 461px;
         width: 100%;
+        @media all and (max-width: 767.98px) {
+            max-width: 325px;
+            margin-bottom: 16px;
+        }
     }
     .textItem {
         &:not(:last-child) {
@@ -36,5 +50,9 @@
         border-radius: 16px;
         overflow: hidden;
         object-fit: cover;
+        @media all and (max-width: 767.98px) {
+            margin-top: 32px;
+            height: 223px;
+        }
     }
 }

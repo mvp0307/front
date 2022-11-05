@@ -6,24 +6,46 @@
     background-color: $darken;
     padding: 18px 0;
     @include flex-center-vert;
+    @media all and (max-width: 1024px) {
+        margin-top: 60px;
+    }
     .banerRow {
         @include flexRow(15, 2, center);
+        @media all and (max-width: 767.98px) {
+            @include flexRow(15, 1, center);
+        }
         justify-content: space-between;
         .banerLfet {
+            @media all and (max-width: 767.98px) {
+                @include flex-center-vert;
+                justify-content: space-between;
+                margin-bottom: 15px;
+            }
             .bannerTitle {
                 @include fontRem(28, 700, 38);
                 color: rgba($white, 0.9);
                 margin-bottom: 4px;
+                @media all and (max-width: 1024px) {
+                    @include fontRem(24, 700, 38);
+                }
             }
             .bannerSubTitle {
                 @include fontRem(40, 700, 55);
                 color: $white;
+                @media all and (max-width: 1024px) {
+                    @include fontRem(32, 700, 38);
+                }
             }
         }
         .bannerRight {
             .bannerText {
                 @include fontRem(16, 500, 22);
                 color: $white;
+                @media all and (max-width: 767.98px) {
+                    text-align: left;
+                    max-width: 295px;
+                    @include fontRem(14, 500, 19);
+                }
             }
         }
     }
