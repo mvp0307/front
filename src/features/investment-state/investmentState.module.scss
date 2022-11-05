@@ -3,6 +3,9 @@
 
 .investmentState {
     margin-top: 77px;
+    @media all and (max-width: 1024px) {
+        margin-top: 48px;
+    }
     .investmentTitle {
         margin-bottom: 8px;
         color: $darken;
@@ -37,6 +40,9 @@
                         @include fontRem(44, 700, 60);
                         color: $green;
                         margin-bottom: 12px;
+                        @media all and (max-width: 1024px) {    
+                            @include fontRem(30, 700, 42);
+                        }
                     }
                     .dailyRate {
                         @include fontRem(16, 500, 22);
@@ -53,17 +59,33 @@
                 max-width: 80%;
                 .rightSideRow {
                     @include flexRow(32, 3);
+                    @media all and (max-width: 1280px) {
+                        @include flexRow(16, 3);
+                    }
                     .rightSideContent {
                         padding: 16px 24px 16px 16px;
                         background-color: $white;
                         box-shadow: 0px 17px 38px -12px rgba(14, 114, 102, 0.14);
                         border-radius: 12px;
+                        @media all and (max-width: 1280px) {
+                            padding: 12px 16px 12px;
+                        }
+                        @media all and (max-width: 1024px) {
+                            padding: 12px;
+                        }
                         .innerRow {
                             @include RowItems(16, flex-start);
+                            @media all and (max-width: 1024px) {
+                                @include RowItems(8, flex-start);
+                            }
                             .leftLogo {
                                 flex: 0 0 60px;
                                 max-width: 60px;
                                 height: 44px;
+                                @media all and (max-width: 1024px) {
+                                    flex: 0 0 46px;
+                                max-width: 46px;
+                                }
                                 svg {
                                     width: 44px;
                                     height: 44px;
@@ -71,6 +93,14 @@
                                     min-height: 44px;
                                     max-width: 44px;
                                     max-height: 44px;
+                                    @media all and (max-width: 1024px) {
+                                        width: 30px;
+                                    height: 30px;
+                                    min-width: 30px;
+                                    min-height: 30px;
+                                    max-width: 30px;
+                                    max-height: 30px;
+                                    }
                                 }
                             }
                             .rightItems {
@@ -78,6 +108,14 @@
                                 .itemName {
                                     @include fontRem(20, 700, 27);
                                     margin-bottom: 8px;
+                                    @media all and (max-width: 1280px) {
+                                        @include fontRem(18, 700, 24);
+                                    }
+                                    @media all and (max-width: 1024px) {
+                                        @include fontRem(16, 700, 22);
+                                        height: 44px;
+                                        @include textShorten(2);
+                                    }
                                 }
                                 .itemTotal {
                                     @include fontRem(23, 800, 33);

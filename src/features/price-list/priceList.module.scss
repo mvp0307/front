@@ -3,28 +3,56 @@
 
 .priceListSectin {
     margin-top: 110px;
+    @media all and (max-width: 767.98px) {
+        margin-top: 58px;
+    }
     .titleBlock {
         text-align: center;
         margin-bottom: 70px;
+        @media all and (max-width: 767.98px) {
+            margin-bottom: 32px;
+        }
     }
     .pricelistRow {
         @include flexRow(24, 4, flex-start);
+        @media all and (max-width: 1280px) {
+            @include flexRow(12, 4, flex-start);
+        }
+        @media all and (max-width: 767.98px) {
+            @include flexRow(8, 2, flex-start);
+        }
+
         .pricelistItem {
             padding: 16px 16px 24px;
             box-shadow: 0px 17px 38px -12px rgba(14, 114, 102, 0.14);
             border-radius: 12px;
             background-color: $white;
+            @media all and (max-width: 767.98px) {
+                margin-bottom: 12px;
+                padding: 14px 7px;
+            }
             .itemTitle {
                 text-align: center;
                 color: rgba($darken, 0.8);
                 margin-bottom: 22px;
                 @include fontRem(20, 700, 27);
+                @media all and (max-width: 767.98px) {
+                    @include fontRem(16, 700, 22);
+                }
             }
             .itemPrice {
                 text-align: center;
                 @include fontRem(28, 700, 38);
                 color: $green;
                 margin-bottom: 45px;
+                @media all and (max-width: 1024px) {
+                    @include fontRem(22, 700, 28);
+                    margin-bottom: 25px;
+                }
+                @media all and (max-width: 767.98px) {
+                    @include fontRem(18, 700, 25);
+                    margin-bottom: 35px;
+                }
             }
             .percentList {
                 list-style-type: none;
@@ -38,9 +66,15 @@
                     span {
                         &:first-child {
                             @include fontRem(14, 500, 19);
+                            @media all and (max-width: 767.98px) {
+                                @include fontRem(12, 500, 16); 
+                            }
                         }
                         &:last-child {
                             @include fontRem(18, 600, 25);
+                            @media all and (max-width: 767.98px) {
+                                @include fontRem(14, 500, 19); 
+                            }
                         }
                     }
                 }
@@ -50,9 +84,18 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                @media all and (max-width: 1024px) {
+                    flex-direction: column;
+                }
+                @media all and (max-width: 767.98px) {
+                    margin-top: 25px;
+                }
                 button {
                     @include flex-center-vert;
                     @include buttonNulled;
+                    @media all and (max-width: 1024px) {
+                        justify-content: center;
+                    }
                     width: 100%;
                     &.outlinedButton {
                         color: $green;
@@ -61,6 +104,9 @@
                         padding: 12px 16px;
                         transition: 0.3s;
                         cursor: pointer;
+                        @media all and (max-width: 1280px) {
+                            padding: 12px 6px;
+                        }
                         &:hover {
                             background: rgba(67, 173, 154, 0.16);
                         }
