@@ -46,10 +46,7 @@ const ModalWrapper: React.FC = () => {
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <div
-        onClick={() => setModal('')}
-        style={{ position: 'absolute', right: '24px', cursor: 'pointer' }}
-      >
+      <div className="modalCloser" onClick={() => setModal('')}>
         <X />
       </div>
       {modal && <Component />}

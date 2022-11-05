@@ -192,5 +192,18 @@ main {
   border-radius: 12px !important;
   max-width: 552px !important;
   width: 100% !important;
-  
+  @media all and (max-width: 767.98px) {
+    width: calc(100% - 32px) !important;
+    padding: 0 !important;
+  }
+  .modalCloser {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    @media all and (max-width: 767.98px) {
+      top: 9px;
+      right: 9px;
+    }
+  }
 }

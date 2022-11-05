@@ -5,6 +5,10 @@
     margin-top: 48px;
     background-color: $darken;
     padding: 28px 0 75px;
+    @media all and (max-width: 1280px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .grosslineItem {
         .grossLineTitle {
             @include fontRem(24, 700, 33);

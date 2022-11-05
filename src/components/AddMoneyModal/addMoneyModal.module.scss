@@ -7,9 +7,15 @@
     .modalBody {
         padding: 48px;
         text-align: center;
+        @media all and (max-width: 767.98px) {
+            padding: 32px 6px;
+        }
         .modalTitle {
             @include fontRem(24, 700, 33);
             color: $darken;
+            @media all and (max-width: 767.98px) {
+                @include fontRem(18, 700, 25);
+            }
         }
         .warningMessage {
             @include flex-center-vert;
@@ -20,6 +26,12 @@
             color: #ca1b1b;
             @include fontRem(18, 500, 22);
             margin: 28px 0 14px;
+            @media all and (max-width: 767.98px) {
+                @include fontRem(14, 500, 19);
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         .modalInvestItems {
             margin-top: 34px;
@@ -27,16 +39,26 @@
             box-shadow: 4px 8px 40px -8px rgba(14, 114, 102, 0.12);
             border-radius: 12px;
             padding: 21px 16px;
+            @media all and (max-width: 767.98px) {
+                padding: 16px 12px;
+                margin-top: 24px;
+            }
             .itemsTitle {
                 letter-spacing: 0.05em;
                 @include fontRem(16, 600, 19);
                 color: $green;
                 margin-bottom: 16px;
+                @media all and (max-width: 767.98px) {
+                    text-align: left;
+                }
             }
             .itemsWrap {
                 @include flex-center-vert;
                 gap: 35px;
                 justify-content: space-evenly;
+                @media all and (max-width: 767.98px) {
+                    gap: 10px;
+                }
                 .item {
                     input {
                         display: none;
@@ -76,6 +98,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media all and (max-width: 767.98px) {
+                padding: 0 12px;
+            }
             p,
             span {
                 @include fontRem(12, 500, 16);

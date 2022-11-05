@@ -3,16 +3,28 @@
 
 .referalsSection {
     margin-top: 110px;
+    @media all and (max-width: 767.98px) {
+        margin-top: 32px;
+    }
     .referalsBlock {
         padding: 42px 32px 32px;
         background-color: $white;
         box-shadow: 0px 17px 36px -12px rgba(14, 114, 102, 0.1);
         border-radius: 12px;
+        @media all and (max-width: 767.98px) {
+            padding: 32px 16px;
+        }
         .referalsTitle {
             @include fontRem(28, 700, 38);
             display: flex;
             align-items: center;
             gap: 16px;
+            @media all and (max-width: 1024px) {
+                @include fontRem(18, 700, 20);
+            }
+            @media all and (max-width: 767.98px) {
+                margin-bottom: 24px;
+            }
             button {
                 display: flex;
                 @include buttonNulled;
@@ -20,6 +32,9 @@
         }
         .currentCode {
             @include flexRow(20, 2, center);
+            @media all and (max-width: 767.98px) {
+                @include flexRow(0, 1, center);
+            }
             .codeBlock {
                 display: flex;
                 gap: 10px;
@@ -43,11 +58,18 @@
             }
         }
         .inviteBlock {
-            margin-top: 56px;
+            margin-top: 33px;
             @include flexRow(20, 2, center);
+            @media all and (max-width: 767.98px) {
+                @include flexRow(0, 1, center);
+            }
             .formItem {
                 display: flex;
                 align-items: flex-end;
+                @media all and (max-width: 767.98px) {
+                 flex-direction: column;
+                 align-items: flex-start;
+                }
 
                 .inputWrapper {
                     width: 100%;
@@ -77,6 +99,12 @@
                     &:disabled {
                         color: rgba(1, 28, 24, 0.4);
                     }
+                    @media all and (max-width: 1280px) {
+                        max-width: 320px;
+                    }
+                    @media all and (max-width: 767.98px) {
+                        max-width: 100%;
+                    }
                 }
                 .errorMsg {
                     margin-top: 8px;
@@ -103,6 +131,19 @@
                     margin-left: auto;
                     text-align: center;
                     justify-content: center;
+                    @media all and (max-width: 1024px) {
+                        flex: 0 0 80px;
+                        padding: 10px 20px;
+                        margin-left: 12px;
+                    }
+                    @media all and (max-width: 767.98px) {
+                        flex: 0 0 auto;
+                        margin-left: 0;
+                        margin-top: 32px;
+                        width: fit-content;
+                        padding-left: 56px;
+                        padding-right: 56px;
+                    }
                     &:hover {
                         background: $gradientReverse;
                     }
