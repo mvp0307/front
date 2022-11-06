@@ -21,10 +21,14 @@ const InvestmentState = () => {
           <div className={styles.investmentRow}>
             <div className={`col_ ${styles.investmentLeft}`}>
               <div className={styles.leftSideContent}>
-                <p className={styles.smallTitle}>Total Balance</p>
-                <p className={styles.mainPrice}>$ 230</p>
-                <p className={styles.dailyRate}>Daily Rate</p>
-                <p className={styles.rateTotal}>5 %</p>
+                <div className={styles.totalWrapper}>
+                  <p className={styles.smallTitle}>Total Balance</p>
+                  <p className={styles.mainPrice}>$ 230</p>
+                </div>
+                <div className={styles.dailyRateWrapper}>
+                  <p className={styles.dailyRate}>Daily Rate</p>
+                  <p className={styles.rateTotal}>5 %</p>
+                </div>
               </div>
             </div>
             <div className={`col_ ${styles.investmentRight}`}>
