@@ -1,23 +1,40 @@
 @import "/src/styles/mixins";
 @import "/src/styles/variables";
 
-
 .howToGrossSection {
     margin-top: 100px;
+    @media all and (max-width: 767.98px) {
+        margin-top: 48px;
+    }
     .howToGrossRow {
         @include flexRow(24, 2, center);
+        @media all and (max-width: 767.98px) {
+            @include flexRow(0, 1, flex-start);
+        }
         .grossLeftBlock {
             max-width: 508px;
             .titleBlock {
                 margin-bottom: 32px;
+                @media all and (max-width: 767.98px) {
+                    margin-bottom: 16px;
+                }
             }
             .howtoGrossText {
                 @include fontRem(16, 400, 22);
                 color: $darken;
+                @media all and (max-width: 767.98px) {
+                    @media all and (max-width: 767.98px) {
+                        @include fontRem(14, 400, 20);
+                        margin-bottom: 40px;
+                    }
+                }
             }
         }
         .heroImage {
             text-align: right;
+            @media all and (max-width: 767.98px) {
+                text-align: center;
+            }
         }
     }
 }
