@@ -7,9 +7,16 @@
         text-align: center;
         @include fontRem(24, 700, 33);
         margin-bottom: 64px;
+        @media all and (max-width: 767.98px) {
+            margin-bottom: 40px;
+            @include fontRem(20, 700, 27);
+        }
     }
     .grossRow {
         @include flexRow(24, 2);
+        @media all and (max-width: 1024px) {
+            @include flexRow(0, 1);
+        }
         .grossItem {
             @include flex-column;
             padding: 6px 24px 24px 24px;
@@ -18,6 +25,15 @@
             border-radius: 12px;
             min-height: 571px;
             height: 580px;
+            @media all and (max-width: 1024px) {
+                height: auto;
+                min-height: initial;
+                margin-bottom: 24px;
+                padding: 24px 16px;
+            }
+            @media all and (max-width: 767.98px) {
+                margin-bottom: 16px;
+            }
             .grossHeader {
                 padding-bottom: 18px;
                 border-bottom: 1px solid rgba(67, 173, 154, 0.32);
@@ -26,11 +42,17 @@
                 margin-top: 18px;
                 margin-bottom: 14px;
                 @include fontRem(20, 700, 24);
+                @media all and (max-width: 767.98px) {
+                    @include fontRem(14, 700, 20);
+                }
             }
             .subText {
                 @include fontRem(16, 600, 22);
                 margin-bottom: 12px;
                 max-width: 437px;
+                @media all and (max-width: 767.98px) {
+                    @include fontRem(14, 600, 20);
+                }
             }
             .subTextWrapper {
                 margin-top: 12px;
@@ -44,10 +66,16 @@
                 color: rgba(1, 28, 24, 0.8);
                 display: flex;
                 justify-content: space-between;
+                @media all and (max-width: 767.98px) {
+                    @include fontRem(14, 400, 17);
+                }
                 .percentItem {
                     margin-left: 10px;
                     color: $green;
                     @include fontRem(16, 600, 19);
+                    @media all and (max-width: 767.98px) {
+                        @include fontRem(14, 600, 17);
+                    }
                 }
                 .subText {
                     margin-bottom: 0;
@@ -79,6 +107,9 @@
                             color: $green;
                             text-align: right;
                             font-weight: 600;
+                        }
+                        @media all and (max-width: 767.98px) {
+                            @include fontRem(14, 400, 19);  
                         }
                     }
                 }
