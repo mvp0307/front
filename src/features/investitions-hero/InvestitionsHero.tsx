@@ -54,8 +54,10 @@ const InvestitionsHero = () => {
               </div>
             </div>
           </div>
-          <div className={styles.heroImage}>
-            <img src={heroImg} alt="" />
+          <div className="col_">
+            <div className={styles.heroImage}>
+              <img src={heroImg} alt="" />
+            </div>
           </div>
         </div>
       </div>
