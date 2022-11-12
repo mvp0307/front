@@ -207,3 +207,14 @@ main {
     }
   }
 }
+
+.tooltipWrapper {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    > div {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

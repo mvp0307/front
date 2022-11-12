@@ -25,7 +25,7 @@ const Dashboard: React.FC = () => {
       ) : (
         <PriceList />
       )}
-      <div onClick={() => setModal('add-money')} className="d_modal_primaryBtn">
+      <div onClick={() => setModal('withdraw-money')} className="d_modal_primaryBtn">
         Show monetization map
       </div>
       <ReferalsBlock />

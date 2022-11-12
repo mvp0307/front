@@ -3,6 +3,7 @@ import React from 'react';
 import ActiveSvg from '../../assets/svgs/ActiveSvg';
 import InactiveSvg from '../../assets/svgs/InactiveSvg';
 import InfoSvg from '../../assets/svgs/InfoSvg';
+import Tooltip from '../../components/Tooltip/Tooltip';
 import styles from './invitedUsers.module.scss';
 
 const InvidtedUser = () => {
@@ -21,9 +22,10 @@ const InvidtedUser = () => {
                 <p className={styles.activeText}>
                   <ActiveSvg /> Active
                 </p>
-                <button>
+                <div className="tooltipWrapper">
                   <InfoSvg />
-                </button>
+                  <Tooltip />
+                </div>
               </div>
             </div>
           </li>
@@ -35,9 +37,10 @@ const InvidtedUser = () => {
                 <p className={styles.inactiveText}>
                   <InactiveSvg /> Inactive
                 </p>
-                <button>
+                <div className="tooltipWrapper">
                   <InfoSvg />
-                </button>
+                  <Tooltip />
+                </div>
               </div>
             </div>
           </li>

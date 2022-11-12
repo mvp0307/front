@@ -1,0 +1,27 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.tooltipItem {
+    position: absolute;
+    padding: 12px 8px;
+    background: #f6fffc;
+    box-shadow: 0px 14px 36px -2px rgba(14, 114, 102, 0.1);
+    border-radius: 12px;
+    min-width: 234px;
+    max-width: 235px;
+    width: 100%;
+    @include fontRem(12, 400, 16);
+    visibility: hidden;
+    opacity: 0;
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 16px;
+        height: 16px;
+        background: #f6fffc;
+        border-radius: 2px;
+        left: 50%;
+        transform: translate(-50%, 50%) rotate(45deg);
+    }
+}

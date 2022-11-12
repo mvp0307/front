@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
         <div className={styles.footerRow}>
           <p> &#169; Copyright MVP,INC. All Rights reserved</p>
 
-          <p className={styles.linksWrapper}>
+          <div className={styles.linksWrapper}>
             {user && <p>Contact US</p>}
             <a href="#">Privacy Policy</a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
