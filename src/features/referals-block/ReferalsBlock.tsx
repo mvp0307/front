@@ -2,6 +2,7 @@ import React from 'react';
 
 import CopySvg from '../../assets/svgs/CopySvg';
 import InfoSvg from '../../assets/svgs/InfoSvg';
+import Tooltip from '../../components/Tooltip/Tooltip';
 import styles from './referalsBlock.module.scss';
 
 const ReferalsBlock = () => {
@@ -26,9 +27,10 @@ const ReferalsBlock = () => {
             <div className="col_">
               <h2 className={styles.referalsTitle}>
                 Реферальный код приглашения
-                <button>
+                <div className="tooltipWrapper">
                   <InfoSvg />
-                </button>
+                  <Tooltip />
+                </div>
               </h2>
             </div>
             <div className="col_">

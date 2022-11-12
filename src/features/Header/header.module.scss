@@ -59,6 +59,7 @@
                 > li {
                     position: relative;
                     .dropdownControl {
+                        cursor: pointer;
                         display: flex;
                         align-items: center;
                         gap: 6px;
