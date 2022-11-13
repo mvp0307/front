@@ -4,6 +4,9 @@
 .modalContent {
     max-height: calc(100vh - 3.5rem);
     overflow: auto;
+    @media only screen and (max-width: 767.98px) {
+        padding: 20px;
+    }
     .modalBody {
         text-align: center;
         .modalTitle {
@@ -19,6 +22,9 @@
         }
         .modalIcon {
             margin-bottom: 80px;
+            @media only screen and (max-width: 767.98px) {
+                margin-bottom: 30px;
+            }
         }
         .modalBtn {
             button {
@@ -26,7 +32,6 @@
                 @include buttonNulled;
                 padding: 12px 16px;
                 background: $gradient;
-                box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
                 border-radius: 12px 12px 0px 12px;
                 color: $white;
                 transition: 0.3s;

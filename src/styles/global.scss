@@ -211,10 +211,23 @@ main {
 .tooltipWrapper {
   position: relative;
   cursor: pointer;
+  
   &:hover {
     > div {
       visibility: visible;
       opacity: 1;
     }
+  }
+}
+@media all and (max-width: 1320px) {
+  .tooltipWrapperUser {
+    position: static;
+  }
+ }
+#tooltip-1, #tooltip-2 {
+  @media all and (max-width: 1320px) {
+    left: 50% !important;
+    transform: translateX(-50%);
+    top: -78px !important;
   }
 }

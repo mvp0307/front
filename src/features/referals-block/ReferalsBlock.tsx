@@ -12,7 +12,17 @@ const ReferalsBlock = () => {
         <div className={styles.referalsBlock}>
           <div className={styles.currentCode}>
             <div className="col_">
-              <h2 className={styles.referalsTitle}>Реферальный Код</h2>
+              <h2 className={styles.referalsTitle}>
+                Реферальный Код
+                <div className="tooltipWrapper">
+                  <InfoSvg />
+                  <Tooltip
+                    id={3}
+                    text1="При помоши личного реферального кода вы можете пригласить друзей и поднять ваш ежедневный процент."
+                    text2="Скопируйте код и попросите вашего друга после регистрации, перед тем как инвестировать, добавить код в блок <strong><<Реферальный код приглашения>></strong>."
+                  />
+                </div>
+              </h2>
             </div>
             <div className="col_">
               <div className={styles.codeBlock}>
@@ -26,10 +36,14 @@ const ReferalsBlock = () => {
           <div className={styles.inviteBlock}>
             <div className="col_">
               <h2 className={styles.referalsTitle}>
-                Реферальный код приглашения
+                <span>Реферальный код приглашения</span>
                 <div className="tooltipWrapper">
                   <InfoSvg />
-                  <Tooltip />
+                  <Tooltip
+                    id={4}
+                    text1="Напишите код приглашения который отправил ваш друг и нажмите кнопку Добавить.Так же у вас есть возможность поделиться своим Реферальным кодом."
+                    text2="Блок выше <strong><<Личный Реферальный Код>></strong>."
+                  />
                 </div>
               </h2>
             </div>

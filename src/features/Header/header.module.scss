@@ -80,6 +80,7 @@
                     border-radius: 12px;
                     visibility: hidden;
                     opacity: 0;
+                    z-index: 1;
                     transition: 0.3s;
                     li {
                         .dropDownItems {
@@ -140,6 +141,7 @@
                 box-shadow: -15px 0px 32px rgba(14, 114, 102, 0.06);
                 backdrop-filter: blur(6px);
                 display: block;
+                transition: 0.3s;
                 &.openedMenu {
                     right: 0;
                 }
@@ -156,6 +158,9 @@
             margin-left: 40px;
             @media all and (max-width: 1024px) {
                 margin-left: 10px;
+            }
+            @media all and (max-width: 767.98px) {
+                margin-left: 0;
             }
             svg {
                 animation: 10s rotate360 infinite linear;

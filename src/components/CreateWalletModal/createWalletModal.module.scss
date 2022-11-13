@@ -25,6 +25,7 @@
                     margin-bottom: 16px;
                 }
                 .itemTitle {
+                    text-align: left;
                     @include fontRem(16, 400, 22);
                     @include textShorten(1);
 

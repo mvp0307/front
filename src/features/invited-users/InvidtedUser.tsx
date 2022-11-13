@@ -22,9 +22,13 @@ const InvidtedUser = () => {
                 <p className={styles.activeText}>
                   <ActiveSvg /> Active
                 </p>
-                <div className="tooltipWrapper">
+                <div className="tooltipWrapper tooltipWrapperUser">
                   <InfoSvg />
-                  <Tooltip />
+                  <Tooltip
+                    id={1}
+                    text1="Статус <span style='color:#43AD9A'>Активный</span> озночает что ваш приглашенный пользователь уже инвестировал в MVP."
+                    text2=""
+                  />
                 </div>
               </div>
             </div>
@@ -37,9 +41,13 @@ const InvidtedUser = () => {
                 <p className={styles.inactiveText}>
                   <InactiveSvg /> Inactive
                 </p>
-                <div className="tooltipWrapper">
+                <div className="tooltipWrapper tooltipWrapperUser">
                   <InfoSvg />
-                  <Tooltip />
+                  <Tooltip
+                    id={2}
+                    text1="Статус <span style='color:#e30029'>Неактивный</span> озночает что ваш приглашенный пользователь пока что не инвестировал в MVP."
+                    text2=""
+                  />
                 </div>
               </div>
             </div>
