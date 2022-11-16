@@ -1,0 +1,40 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.errorPageItem{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    
+}
+
+
+.errorPagesItem{
+    display: flex;
+    justify-content: center;
+}
+
+ .errorPageButn {
+    @include flex-center-vert;
+    @include buttonNulled;
+    padding: 16px;
+    background: $gradient;
+    box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+    border-radius: 12px 12px 0px 12px;
+    color: $white;
+    transition: 0.3s;
+    
+    min-width: 217px;
+    margin-top: 8px;
+    text-align: center;
+    justify-content: center;
+    &:hover {
+        background: $gradientReverse;
+    }
+    @media all and (max-width: 767.98px) {
+        margin-left: 0;
+        min-width: 188px;
+    }
+}

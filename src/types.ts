@@ -5,6 +5,7 @@ export enum ERoutes {
   Dashboard = '/dashboard',
   Investitions = '/investitions',
   Gross = '/gross',
+  Error404 = '/404',
 }
 export type TModalTypes =
   | 'add-money'
