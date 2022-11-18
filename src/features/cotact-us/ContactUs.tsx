@@ -50,7 +50,7 @@ const ContactUs = () => {
                       <textarea id="messageId" placeholder="Type your message..." />
                     </div>
                   </div>
-                  <button className={styles.submitBtn}>Contact Us</button>
+                  <button className={styles.submitBtn}>Contact Us</button>dsfsdf
                 </div>
               </form>
             </div>

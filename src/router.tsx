@@ -10,6 +10,7 @@ import { Web3Context } from './context/web3Context';
 import ModalWrapper from './features/modal/modal';
 import { ERoutes } from './types';
 import Dashboard from './views/Dashboard/Dashboard';
+import Error404 from './views/Error404/Error404';
 import Gross from './views/Gross/Gross';
 import HomePage from './views/HomePage/HomePage';
 import Investitions from './views/Investitions/Investitions';
@@ -85,7 +86,9 @@ const Routes: React.FC = () => {
             <Route exact path={`${ERoutes.Gross}`}>
               <Gross />
             </Route>
-            <Route>404 Page</Route>
+            <Route>
+              <Error404 />
+            </Route>
           </Switch>
         ) : (
           <PageLoader />
