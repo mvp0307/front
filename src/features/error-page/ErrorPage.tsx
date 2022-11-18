@@ -13,18 +13,16 @@ const ErrorPage = () => {
   };
   return (
     <section className={styles.errorPageSection}>
-      <div className="container">
-        <div className={styles.errorPageItem}>
-          <div className={styles.errorPagesItem}>
-            <h1 className={styles.errorPageTitle}>Oops</h1>
-            <div>
-              <ErrorSvg />
-            </div>
-          </div>
-          <h2>404. That’s an error. </h2>
-          <p className={styles.errorPageSubTitle}>
-            We’re sorry, the page you requested could not be found Please ga back to the homepage
-          </p>
+      <div className={styles.errorPageItem}>
+        <div className={styles.errorPagesItem}>
+          <h1>Oops</h1>
+          <ErrorSvg />
+        </div>
+        <h2>404. That’s an error. </h2>
+        <p className={styles.errorPageSubTitle}>
+          We’re sorry, the page you requested could not be found Please ga back to the homepage
+        </p>
+        <div className={styles.buttonWrapper}>
           <button className={styles.errorPageButn} onClick={coursesPage}>
             Go Home
           </button>

@@ -1,19 +1,48 @@
 @import "/src/styles/mixins";
 @import "/src/styles/variables";
 
-.errorPageItem{
+
+.errorPageSection {
+    height: calc(100vh - 269px);
     display: flex;
     justify-content: center;
-    justify-content: space-between;
-    flex-direction: column;
-    
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (max-width: 767.98px) {
+        padding: 56px 67px 0 67px;
+    }
 }
 
+.errorPageItem{
+    max-width: 412px;    
+
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 32px;
+    }
+    p{
+        text-align: center;
+        margin-top: 16px;
+    }
+}
+.buttonWrapper{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .errorPagesItem{
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    h1{
+        margin-bottom: 5px
+    }
 }
 
  .errorPageButn {
