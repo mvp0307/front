@@ -15,6 +15,7 @@ import Gross from './views/Gross/Gross';
 import HomePage from './views/HomePage/HomePage';
 import Investitions from './views/Investitions/Investitions';
 import Map from './views/Map/Map';
+import Settings from './views/Settings/Settings';
 
 const Routes: React.FC = () => {
   const [address, setAddress] = useState<string>('');
@@ -85,6 +86,9 @@ const Routes: React.FC = () => {
             </Route>
             <Route exact path={`${ERoutes.Gross}`}>
               <Gross />
+            </Route>
+            <Route exact path={`${ERoutes.Settings}`}>
+              <Settings />
             </Route>
             <Route>
               <Error404 />

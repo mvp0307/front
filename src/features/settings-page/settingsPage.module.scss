@@ -1,0 +1,82 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+
+.settingsPageSection {
+    height: calc(100vh - 269px);
+    display: flex;
+    align-items: center;
+    @media all and (max-width: 767.98px) {
+        padding: 56px 67px 0 67px;
+    }
+}
+
+ .settingsPageeSubTitle{
+    margin-top: 35px;
+ }
+.settingsUserWrapper{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 15px;
+    
+}
+ .copyReferralCodecontainer{
+    margin-left: 50px;
+    justify-content: flex-start;
+ }
+.copyReferralCode{
+    position: relative;
+    max-width: 528px;
+    max-height: 58px;
+    border: 1px  ;
+    border-radius: 50px;
+    display: flex;
+    background-color: white;
+    margin-top: 12px;
+   
+    button {
+        border: none;
+        outline: none;
+        background-color:white ;
+        border-radius: 12px;
+        padding: 16px;  
+    }
+    input{
+        border: none;
+        outline: none;
+        width: 528px;
+        height: 58px;
+        border-radius: 12px;
+        padding: 18px;
+    }
+
+}
+
+.buttonWrapper{
+    margin-top: 48px;
+    display: flex; 
+    align-items: center;
+}
+
+ .settingsPageButn {
+    @include flex-center-vert;
+    @include buttonNulled;
+    padding: 16px;
+    background: $gradient;
+    box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+    border-radius: 12px 12px 0px 12px;
+    color: $white;
+    transition: 0.3s;
+    
+    min-width: 146px;
+    margin-top: 8px;
+    text-align: center;
+    justify-content: center;
+    &:hover {
+        background: $gradientReverse;
+    }
+    @media all and (max-width: 767.98px) {
+        margin-left: 0;
+        min-width: 188px;
+    }
+}

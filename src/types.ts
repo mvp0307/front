@@ -5,6 +5,7 @@ export enum ERoutes {
   Dashboard = '/dashboard',
   Investitions = '/investitions',
   Gross = '/gross',
+  Settings = '/settings',
   Error404 = '/404',
 }
 export type TModalTypes =
