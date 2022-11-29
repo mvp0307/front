@@ -58,7 +58,7 @@
     align-items: center;
 }
 
- .settingsPageButn {
+.settingsPageButn {
     @include flex-center-vert;
     @include buttonNulled;
     padding: 16px;
@@ -79,4 +79,9 @@
         margin-left: 0;
         min-width: 188px;
     }
+}
+
+
+.errorText{
+    color: rgb(255, 0, 0);
 }

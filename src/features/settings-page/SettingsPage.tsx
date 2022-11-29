@@ -8,15 +8,17 @@ const SettingsPage = () => {
   const [copyText, setCopyText] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  
-  const regex =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-  const hendleEmail = (e) => {
-    if (regex.test(email) === false) {
+  const regex = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
+
+  const hendleEmail = (e: { target: { value: React.SetStateAction<string> } }) => {
+    if (regex.test(email) === true) {
       setError('Error text here');
-    } else {
-      setError('');
     }
+    //  else {
+    //   setError('');
+    //   return true;
+    // }
 
     setEmail(e.target.value);
   };
@@ -47,8 +49,9 @@ const SettingsPage = () => {
             </div>
           </div>
         </div>
-        <p>Email</p>
+
         <div className={styles.buttonWrapper}>
+          <p>Email</p>
           <input type="email" name="Email" onChange={hendleEmail} />
           <button className={styles.settingsPageButn}>Confirm</button>
         </div>
