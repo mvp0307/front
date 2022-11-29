@@ -33,12 +33,13 @@
             @include fontRem(16, 500, 22);
             color: $darken;
         }
-        a {
+        span {
             display: inline-block;
             color: $green;
             text-decoration: none;
             margin-top: 12px;
             transition: 0.3s;
+            cursor: pointer;
             &:hover {
                 text-decoration: underline;
             }

@@ -21,6 +21,23 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                position: relative;
+                @media all and (max-width: 767.98px) {
+                    &::after{
+                        content: '';
+                        width: 80%;
+                        left: 10%;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        border-top: 1px dashed rgba(67, 173, 154, 0.32);
+                    }
+                }
+                @media all and (max-width: 767.98px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
                 &:not(:last-child) {
                     margin-bottom: 16px;
                 }
@@ -28,6 +45,9 @@
                     text-align: left;
                     @include fontRem(16, 400, 22);
                     @include textShorten(1);
+                    @media all and (max-width: 400px) {
+                        font-size: 0.8rem;
+                    }
 
                 }
                 .watchButton {
@@ -38,6 +58,10 @@
                     @include fontRem(16, 600, 22);
                     color: $green;
                     text-decoration: none;
+                    @media all and (max-width: 767.98px) {
+                        padding-left: 0;
+                        min-width: auto;
+                    }
                 }
             }
         }

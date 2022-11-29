@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import aboutImg from '../../assets/images/statistic.png';
+import { MainContext } from '../../context/mainContext';
 import styles from './aboutUs.module.scss';
 
 const AboutUs = () => {
+  const { setModal } = useContext(MainContext);
+
   return (
     <section className={styles.aboutusSection}>
       <div className="container">
@@ -19,14 +22,14 @@ const AboutUs = () => {
                 feugiat aliquet nec leo imperdiet. Dictum risus, mi scelerisque sagittis, ultricies
                 eu, odio platea congue.
               </p>
-              <a href="#">How to create a wallet</a>
+              <span onClick={() => setModal('create-wallet')}>Как открыть кошельек MetaMask</span>
             </div>
             <div className={styles.textItem}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa, ornare tempus
                 feugiat aliquet nec leo imperdiet. Dictum risus
               </p>
-              <a href="#">How to buy ETH</a>
+              <span onClick={() => setModal('how-to-buy-eth')}>Как купить ETH ?</span>
             </div>
           </div>
           <div className="col_">

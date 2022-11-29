@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import React, { useState } from 'react';
 
 import CopySvg from '../../assets/svgs/CopySvg';
@@ -8,17 +9,18 @@ const SettingsPage = () => {
   const [copyText, setCopyText] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  
-  const regex =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-  const hendleEmail = (e) => {
+  const regex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+  const hendleEmail = (e: any) => {
+    console.log(regex.test(email));
     if (regex.test(email) === false) {
       setError('Error text here');
     } else {
+      setEmail(e.target.value);
       setError('');
     }
-
-    setEmail(e.target.value);
   };
 
   const hendleCopy = () => {

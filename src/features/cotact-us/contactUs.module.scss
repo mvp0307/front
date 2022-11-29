@@ -89,6 +89,7 @@
                         padding: 12px 14px;
                         @include fontRem(16, 500, 14);
                         outline: none;
+                        resize: none;
                         &::placeholder {
                             color: rgba(1, 28, 24, 0.4);
                         }
@@ -106,6 +107,9 @@
                     }
                     &.unvalidated {
                         input {
+                            border: 1px solid $red;
+                        }
+                        textarea {
                             border: 1px solid $red;
                         }
                     }

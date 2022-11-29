@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             ref={mobileMenuRef}
             className={`${styles.menu} ${mobileMenu ? styles.openedMenu : ''}`}
           >
-            <a className={styles.menuItem} href="">
+            <a className={styles.menuItem} href="/gross">
               Gross
             </a>
             <ul
@@ -44,22 +44,22 @@ const Header: React.FC = () => {
                 </div>
                 <ul className={styles.dropList}>
                   <li>
-                    <a className={styles.dropDownItems} href="">
+                    <a className={styles.dropDownItems} href="/investitions">
                       Minor
                     </a>
                   </li>
                   <li>
-                    <a className={styles.dropDownItems} href="">
+                    <a className={styles.dropDownItems} href="/investitions">
                       Major
                     </a>
                   </li>
                   <li>
-                    <a className={styles.dropDownItems} href="">
+                    <a className={styles.dropDownItems} href="/investitions">
                       Grand
                     </a>
                   </li>
                   <li>
-                    <a className={styles.dropDownItems} href="">
+                    <a className={styles.dropDownItems} href="/gross">
                       <PureAwardSvg /> Gross
                     </a>
                   </li>
@@ -68,9 +68,6 @@ const Header: React.FC = () => {
             </ul>
             {user && (
               <>
-                <a className={styles.menuItem} href="">
-                  Map
-                </a>
                 <a className={styles.menuItem} href="/dashboard">
                   Dashboard
                 </a>
@@ -78,7 +75,7 @@ const Header: React.FC = () => {
             )}
             {!isMobile && <ConnectWallet />}
             {user && (
-              <div className={styles.settings}>
+              <div className={styles.settings} onClick={() => (window.location.href = '/settings')}>
                 <Settings />
               </div>
             )}
