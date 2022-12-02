@@ -51,7 +51,7 @@ const SettingsPage = () => {
         </div>
 
         <div className={styles.buttonWrapper}>
-          <p>Email</p>
+          <p>Emails</p>
           <input type="email" name="Email" onChange={hendleEmail} />
           <button className={styles.settingsPageButn}>Confirm</button>
         </div>
