@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-escape */
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import CopySvg from '../../assets/svgs/CopySvg';
 import UsersSvg from '../../assets/svgs/UsersSvg';
@@ -27,16 +28,25 @@ const SettingsPage = () => {
     navigator.clipboard.writeText(copyText);
     console.log('uhfuk');
   };
+  const history = useHistory();
+  const coursesPage = () => {
+    history.push('/gross');
+  };
   return (
     <section className={styles.settingsPageSection}>
       <div className="container">
         <div className={styles.settingsPageItem}>
           <h1>Settings</h1>
         </div>
-        <p className={styles.settingsPageeSubTitle}>
-          Auto generated Avatar: You can change it when become a Gross
-        </p>
-
+        <div className={styles.settingsPageeSubTitle}>
+          <div> Auto generated Avatar:</div>
+          <div className={styles.settingsPageeChangeAvatar}>
+            <div>You can change it when become a </div>
+            <div className={styles.settingsPageeGrossLink} onClick={coursesPage}>
+              Gross
+            </div>
+          </div>
+        </div>
         <div className={styles.settingsUserWrapper}>
           <UsersSvg />
           <div className={styles.copyReferralCodecontainer}>
@@ -49,7 +59,7 @@ const SettingsPage = () => {
             </div>
           </div>
         </div>
-        <p>Email</p>
+        <label htmlFor="emailId">Email</label>
         <div className={styles.buttonWrapper}>
           <input type="email" name="Email" onChange={hendleEmail} />
           <button className={styles.settingsPageButn}>Confirm</button>

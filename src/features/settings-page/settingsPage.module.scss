@@ -6,77 +6,146 @@
     height: calc(100vh - 269px);
     display: flex;
     align-items: center;
+
     @media all and (max-width: 767.98px) {
-        padding: 56px 67px 0 67px;
+      
     }
 }
 
- .settingsPageeSubTitle{
+.settingsPageeSubTitle {
     margin-top: 35px;
- }
-.settingsUserWrapper{
+}
+.settingsPageeGrossLink{
+    display: block;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    color: $green;
+}
+.settingsPageeChangeAvatar{
+    display: flex;
+    gap: 6px;
+}
+
+.settingsUserWrapper {
     display: flex;
     align-items: flex-end;
     margin-top: 15px;
-    
+    @media all and (max-width: 767.98px) {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+    }
+
 }
- .copyReferralCodecontainer{
+
+.copyReferralCodecontainer {
     margin-left: 50px;
     justify-content: flex-start;
- }
-.copyReferralCode{
+    @media all and (max-width: 767.98px) {
+       margin-left: 0;
+
+    }
+}
+
+.copyReferralCode {
     position: relative;
-    max-width: 528px;
+    width: 528px;
     max-height: 58px;
-    border: 1px  ;
+    border: 1px;
     border-radius: 50px;
     display: flex;
     background-color: white;
     margin-top: 12px;
-   
+    @media all and (max-width: 767.98px) {
+           
+        max-width: 360px;
+    }
+
     button {
         border: none;
         outline: none;
-        background-color:white ;
+        background-color: white;
         border-radius: 12px;
-        padding: 16px;  
+        padding: 16px;
     }
-    input{
+
+    input {
         border: none;
         outline: none;
-        width: 528px;
+        width: 526px;
         height: 58px;
         border-radius: 12px;
         padding: 18px;
+        @media all and (max-width: 767.98px) {
+           
+            max-width: 360px;
+        }
     }
 
 }
 
-.buttonWrapper{
-    margin-top: 48px;
-    display: flex; 
-    align-items: center;
+label {
+    display: block;
+    cursor: pointer;
+    margin-top: 166px;
+    @include fontRem(16, 600, 19);
+    letter-spacing: 0.05em;
+    color: $green;
 }
 
- .settingsPageButn {
-    @include flex-center-vert;
-    @include buttonNulled;
-    padding: 16px;
-    background: $gradient;
-    box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
-    border-radius: 12px 12px 0px 12px;
-    color: $white;
-    transition: 0.3s;
-    
-    min-width: 146px;
+.buttonWrapper {
     margin-top: 8px;
-    text-align: center;
-    justify-content: center;
-    &:hover {
-        background: $gradientReverse;
-    }
+    display: flex;
+    align-items: center;
+    gap: 32px;
     @media all and (max-width: 767.98px) {
-        margin-left: 0;
-        min-width: 188px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+    }
+
+    input{
+        background: rgba(67, 173, 154, 0.12);
+        border: 1px solid rgba(67, 173, 154, 0.32);
+        border-radius: 12px;
+        height: 46px;
+        max-width: 360px;
+        width: 100%;
+        padding: 12px 14px;
+        @include fontRem(16, 500, 14);
+        outline: none;
+        resize: none;
+        &::placeholder {
+            color: rgba(1, 28, 24, 0.4);
+        }
+        @media all and (max-width: 767.98px) {
+            max-width: 100%;
+        }
+    }
+
+
+    .settingsPageButn {
+        @include flex-center-vert;
+        @include buttonNulled;
+        padding: 16px;
+        background: $gradient;
+        box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+        border-radius: 12px 12px 0px 12px;
+        color: $white;
+        transition: 0.3s;
+        min-width: 146px;
+        text-align: center;
+        justify-content: center;
+
+        &:hover {
+            background: $gradientReverse;
+        }
+
+        @media all and (max-width: 767.98px) {
+            margin-left: 0;
+            min-width: 146px;
+        }
     }
 }
