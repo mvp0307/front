@@ -3,12 +3,12 @@
 
 
 .settingsPageSection {
-    height: calc(100vh - 269px);
+    height: calc(100vh - 265px);
     display: flex;
     align-items: center;
 
     @media all and (max-width: 767.98px) {
-      
+        height: calc(100vh );
     }
 }
 
@@ -84,11 +84,32 @@
     }
 
 }
-
+.waarningVerifyEmailcontainer{
+    display: flex;
+     gap: 12px;
+   align-items: center;
+    font-family: 'Manrope';
+    font-style: normal;
+    color: #CA1B1B;
+    background:#CA1B1B29;
+    border-radius: 12px;
+    margin-top: 89px;
+    height: 46px;
+    max-width: 392px;
+    width: 100%;
+    padding: 12px 14px;
+   
+    &::placeholder {
+        color: rgba(1, 28, 24, 0.4);
+    }
+    @media all and (max-width: 767.98px) {
+        max-width: 100%;
+    }
+}
 label {
     display: block;
     cursor: pointer;
-    margin-top: 166px;
+    margin-top: 31px;
     @include fontRem(16, 600, 19);
     letter-spacing: 0.05em;
     color: $green;
@@ -148,4 +169,8 @@ label {
             min-width: 146px;
         }
     }
+}
+
+.errorText{
+    color: red;
 }

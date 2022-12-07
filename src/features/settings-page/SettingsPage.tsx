@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import CopySvg from '../../assets/svgs/CopySvg';
 import UsersSvg from '../../assets/svgs/UsersSvg';
+import WarningIcon from '../../assets/svgs/WarningIcon';
 import styles from './settingsPage.module.scss';
 
 const SettingsPage = () => {
@@ -11,15 +12,14 @@ const SettingsPage = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
 
-  const regex =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  const regex = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
 
   const hendleEmail = (e: any) => {
     console.log(regex.test(email));
+    setEmail(e.target.value);
     if (regex.test(email) === false) {
       setError('Error text here');
     } else {
-      setEmail(e.target.value);
       setError('');
     }
   };
@@ -59,12 +59,19 @@ const SettingsPage = () => {
             </div>
           </div>
         </div>
+        <div className={styles.waarningVerifyEmailcontainer}>
+          {' '}
+          <div>
+            <WarningIcon />
+          </div>{' '}
+          <div>You need to verify your email</div>
+        </div>
         <label htmlFor="emailId">Email</label>
         <div className={styles.buttonWrapper}>
           <input type="email" name="Email" onChange={hendleEmail} />
           <button className={styles.settingsPageButn}>Confirm</button>
         </div>
-        <p className={styles.errorText}>{error}</p>
+        <span className={styles.errorText}>{error}</span>
       </div>
     </section>
   );
