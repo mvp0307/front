@@ -8,7 +8,7 @@ const PriceList = () => {
       <div className="container">
         <div className={styles.titleBlock}>
           <p className="title_prefix">You Haven’t Investments</p>
-          <h2 className="title_section">Invest Money And Earn %</h2>
+          {/* <h2 className="title_section">Invest Money And Earn % </h2> */}
         </div>
         <div className={styles.pricelistRow}>
           <div className="col_">

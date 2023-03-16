@@ -91,7 +91,7 @@ const Advantages = () => {
                   tempus feugiat aliquet nec leo imperdiet. Dictum risus, mi scelerisque sagittis,
                   ultricies eu, odio platea congue.
                 </p>
-                <div className={styles.outlinedButton}>Become a Gross</div>
+                <div className={styles.outlinedButton}>Gross</div>
               </div>
             </div>
           </div>

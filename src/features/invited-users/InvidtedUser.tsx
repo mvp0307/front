@@ -11,7 +11,7 @@ const InvidtedUser = () => {
     <section className={styles.invitedUsersSection}>
       <div className="container">
         <div className={styles.titleBlock}>
-          <h2 className="title_section">Invest Money And Earn %</h2>
+          {/* <h2 className="title_section">Invest Money And Earn % </h2> */}
         </div>
         <ol className={styles.invitedUsersList}>
           <li>

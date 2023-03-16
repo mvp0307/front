@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-import Discord from '../../assets/svgs/Discord';
-import InstagramSvg from '../../assets/svgs/InstagramSvg';
-import TikTokSvg from '../../assets/svgs/TikTokSvg';
-import YoutubeSvg from '../../assets/svgs/YoutubeSvg';
 import styles from './contactUs.module.scss';
 
 const ContactUs = () => {
@@ -48,20 +44,6 @@ const ContactUs = () => {
                 <div className={styles.titleBlock}>
                   <p className="title_prefix">Contact Us</p>
                   <h2 className="title_section">Save Time And Manage The Profit Of Investment</h2>
-                </div>
-                <div className={styles.socialShare}>
-                  <a href="#" target="_blank">
-                    <TikTokSvg />
-                  </a>
-                  <a href="#" target="_blank">
-                    <InstagramSvg />
-                  </a>
-                  <a href="#" target="_blank">
-                    <Discord />
-                  </a>
-                  <a href="#" target="_blank">
-                    <YoutubeSvg />
-                  </a>
                 </div>
               </div>
             </div>

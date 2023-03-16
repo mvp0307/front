@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import CopySvg from '../../assets/svgs/CopySvg';
 import InfoSvg from '../../assets/svgs/InfoSvg';
@@ -6,6 +6,11 @@ import Tooltip from '../../components/Tooltip/Tooltip';
 import styles from './referalsBlock.module.scss';
 
 const ReferalsBlock = () => {
+  const [copyText, setCopyText] = useState('');
+
+  const hendleCopy = () => {
+    navigator.clipboard.writeText(copyText);
+  };
   return (
     <section className={styles.referalsSection}>
       <div className="container">
@@ -26,8 +31,9 @@ const ReferalsBlock = () => {
             </div>
             <div className="col_">
               <div className={styles.codeBlock}>
-                <p>13018783-ff2b-4817-a0ba-e63f05257ebb</p>
-                <button>
+                {/* <p>13018783-ff2b-4817-a0ba-e63f05257ebb</p> */}
+                <input value={copyText} onChange={(e) => setCopyText(e.target.value)} />
+                <button onClick={hendleCopy}>
                   <CopySvg />
                 </button>
               </div>
