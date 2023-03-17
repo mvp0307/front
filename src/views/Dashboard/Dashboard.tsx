@@ -10,7 +10,7 @@ import PriceList from '../../features/price-list/PriceList';
 import ReferalsBlock from '../../features/referals-block/ReferalsBlock';
 
 const Dashboard: React.FC = () => {
-  const IS_GROSS = true;
+  const IS_GROSS = false;
   const { setModal } = useContext(MainContext);
 
   return (

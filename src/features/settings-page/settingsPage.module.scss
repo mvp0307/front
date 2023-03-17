@@ -3,16 +3,20 @@
 
 
 .settingsPageSection {
-    height: calc(100vh - 269px);
+    height: calc(100vh - 265px);
     display: flex;
     align-items: center;
+    .container{
+        margin-top: 100px;
+    }
+    
     @media all and (max-width: 767.98px) {
         padding: 56px 67px 0 67px;
     }
 }
 
  .settingsPageeSubTitle{
-    margin-top: 35px;
+    margin-top: 10px;
  }
 .settingsUserWrapper{
     display: flex;
@@ -25,58 +29,140 @@
     justify-content: flex-start;
  }
 .copyReferralCode{
-    position: relative;
-    max-width: 528px;
-    max-height: 58px;
-    border: 1px  ;
-    border-radius: 50px;
     display: flex;
-    background-color: white;
-    margin-top: 12px;
-   
+    width: 520px;
+    height: 58px;
+    gap: 10px;
+    background-color: $white;
+    box-shadow: 2px 12px 32px -12px rgba(14, 114, 102, 0.06);
+    border-radius: 12px;
+    padding: 16px;
+    align-items: center;
+    p {
+        @include textShorten(1);
+        @include fontRem(16, 600, 22);
+    }
     button {
-        border: none;
-        outline: none;
-        background-color:white ;
-        border-radius: 12px;
-        padding: 16px;  
+        margin-left: auto;
+        @include buttonNulled;
+        svg {
+            min-width: 18px;
+            min-height: 18px;
+        }
     }
-    input{
-        border: none;
-        outline: none;
-        width: 528px;
-        height: 58px;
-        border-radius: 12px;
-        padding: 18px;
-    }
-
 }
 
+.settingsPageeGrossLink{
+    display: block;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    color: $green;
+}
+.settingsPageeChangeAvatar{
+    display: flex;
+    gap: 6px;
+}
 .buttonWrapper{
     margin-top: 48px;
     display: flex; 
     align-items: center;
 }
 
- .settingsPageButn {
-    @include flex-center-vert;
-    @include buttonNulled;
-    padding: 16px;
-    background: $gradient;
-    box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
-    border-radius: 12px 12px 0px 12px;
-    color: $white;
-    transition: 0.3s;
-    
-    min-width: 146px;
-    margin-top: 8px;
-    text-align: center;
-    justify-content: center;
-    &:hover {
-        background: $gradientReverse;
+.waarningVerifyEmailcontainer{
+    display: flex;
+     gap: 12px;
+   align-items: center;
+    font-family: 'Manrope';
+    font-style: normal;
+    color: #CA1B1B;
+    background:#CA1B1B29;
+    border-radius: 12px;
+    margin-top: 89px;
+    height: 46px;
+    max-width: 392px;
+    width: 100%;
+    padding: 12px 14px;
+   
+    &::placeholder {
+        color: rgba(1, 28, 24, 0.4);
     }
     @media all and (max-width: 767.98px) {
-        margin-left: 0;
-        min-width: 188px;
+        max-width: 100%;
     }
+}
+label {
+    display: block;
+    cursor: pointer;
+    margin-top: 31px;
+    @include fontRem(16, 600, 19);
+    letter-spacing: 0.05em;
+    color: $green;
+}
+
+.buttonWrapper {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @media all and (max-width: 767.98px) {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+    }
+
+    input{
+        background: rgba(67, 173, 154, 0.12);
+        border: 1px solid rgba(67, 173, 154, 0.32);
+        border-radius: 12px;
+        height: 46px;
+        max-width: 360px;
+        width: 100%;
+        padding: 12px 14px;
+        @include fontRem(16, 500, 14);
+        outline: none;
+        resize: none;
+        &::placeholder {
+            color: rgba(1, 28, 24, 0.4);
+        }
+        @media all and (max-width: 767.98px) {
+            max-width: 100%;
+        }
+    }
+
+
+    .settingsPageButn {
+        @include flex-center-vert;
+        @include buttonNulled;
+        padding: 16px;
+        background: $gradient;
+        box-shadow: 0px 16px 24px rgba(44, 159, 145, 0.3);
+        border-radius: 12px 12px 0px 12px;
+        color: $white;
+        transition: 0.3s;
+        min-width: 146px;
+        text-align: center;
+        justify-content: center;
+
+        &:hover {
+            background: $gradientReverse;
+        }
+        &:disabled {
+            background: #bdcec6;
+            cursor: default;
+            box-shadow: none;
+            &:hover {
+                background: #bdcec6;
+            }
+        }
+
+        @media all and (max-width: 767.98px) {
+            margin-left: 0;
+            min-width: 146px;
+        }
+    }
+}
+
+.errorText{
+    color: red;
 }

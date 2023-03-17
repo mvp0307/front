@@ -23,6 +23,11 @@
         }
 
         .pricelistItem {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: 305px;;
             padding: 16px 16px 24px;
             box-shadow: 0px 17px 38px -12px rgba(14, 114, 102, 0.14);
             border-radius: 12px;
@@ -32,6 +37,10 @@
                 padding: 14px 7px;
             }
             .itemTitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
                 text-align: center;
                 color: rgba($darken, 0.8);
                 margin-bottom: 22px;
@@ -40,18 +49,31 @@
                     @include fontRem(16, 700, 22);
                 }
             }
-            .itemPrice {
-                text-align: center;
-                @include fontRem(28, 700, 38);
-                color: $green;
-                margin-bottom: 45px;
-                @media all and (max-width: 1024px) {
-                    @include fontRem(22, 700, 28);
-                    margin-bottom: 25px;
+            .priceInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .itemPrice {
+                    text-align: center;
+                    @include fontRem(28, 700, 38);
+                    color: $green;
+                    @media all and (max-width: 1024px) {
+                        @include fontRem(22, 700, 28);
+                        margin-bottom: 25px;
+                    }
+                    @media all and (max-width: 767.98px) {
+                        @include fontRem(18, 700, 25);
+                        margin-bottom: 35px;
+                    }
                 }
-                @media all and (max-width: 767.98px) {
-                    @include fontRem(18, 700, 25);
-                    margin-bottom: 35px;
+                .dailyIncome {
+                    font-family: 'Manrope';
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: $green;    
                 }
             }
             .percentList {

@@ -44,17 +44,17 @@ const Header: React.FC = () => {
                 </div>
                 <ul className={styles.dropList}>
                   <li>
-                    <a className={styles.dropDownItems} href="/investitions">
+                    <a className={styles.dropDownItems} href="/investitions/minor">
                       Minor
                     </a>
                   </li>
                   <li>
-                    <a className={styles.dropDownItems} href="/investitions">
+                    <a className={styles.dropDownItems} href="/investitions/major">
                       Major
                     </a>
                   </li>
                   <li>
-                    <a className={styles.dropDownItems} href="/investitions">
+                    <a className={styles.dropDownItems} href="/investitions/grand">
                       Grand
                     </a>
                   </li>

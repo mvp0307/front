@@ -4,7 +4,11 @@ import heroImg from '../../assets/images/investitions-images/hero.png';
 import LongArrowSvg from '../../assets/svgs/LongArrowSvg';
 import styles from './investitionsHero.module.scss';
 
-const InvestitionsHero = () => {
+interface IProps {
+  value: Record<string, string>;
+}
+
+const InvestitionsHero: React.FC<IProps> = ({ value }) => {
   return (
     <section className={styles.investitionsHeroSection}>
       <div className="container">
@@ -13,7 +17,7 @@ const InvestitionsHero = () => {
             <div className={styles.heroLeft}>
               <div className={styles.titleBlock}>
                 <p className="title_prefix">Investment</p>
-                <h2 className="title_section">Minor</h2>
+                <h2 className="title_section">{value.title}</h2>
               </div>
               <div className={styles.heroTexts}>
                 <p>

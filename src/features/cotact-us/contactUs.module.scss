@@ -33,30 +33,30 @@
                     max-width: initial;
                 }
             }
-            .socialShare {
-                margin-top: auto;
-                @include flex-center-vert;
-                gap: 15px;
-                @media all and (max-width: 767.98px) {
-                    margin-top: 32px;
-                    margin-bottom: 32px;
-                }
-                a {
-                    svg {
-                        rect {
-                            fill-opacity: 0.12;
-                            transition: 0.3s;
-                        }
-                    }
-                    &:hover {
-                        svg {
-                            rect {
-                                fill-opacity: 0.32;
-                            }
-                        }
-                    }
-                }
-            }
+            // .socialShare {
+            //     margin-top: auto;
+            //     @include flex-center-vert;
+            //     gap: 15px;
+            //     @media all and (max-width: 767.98px) {
+            //         margin-top: 32px;
+            //         margin-bottom: 32px;
+            //     }
+            //     a {
+            //         svg {
+            //             rect {
+            //                 fill-opacity: 0.12;
+            //                 transition: 0.3s;
+            //             }
+            //         }
+            //         &:hover {
+            //             svg {
+            //                 rect {
+            //                     fill-opacity: 0.32;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
         }
 
         .formWrapper {

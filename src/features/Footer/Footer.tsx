@@ -9,10 +9,11 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footerRow}>
-          <p> &#169; Copyright MVP,INC. All Rights reserved</p>
+          <p> &#169; InvesTonus INC. All Rights reserved</p>
 
           <div className={styles.linksWrapper}>
-            {user && <p>Contact US</p>}
+            {/* {user && <p>Contact US</p>} */}
+            {user && <a href="/">Contact US</a>}
             <a href="#">Privacy Policy</a>
           </div>
         </div>

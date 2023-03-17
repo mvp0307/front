@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+// import { v4 as uuidv4 } from 'uuid';
 import CopySvg from '../../assets/svgs/CopySvg';
 import InfoSvg from '../../assets/svgs/InfoSvg';
 import Tooltip from '../../components/Tooltip/Tooltip';
+import { LOCAL_STORAGE_KEY } from '../../constants/localestorageKeys';
 import styles from './referalsBlock.module.scss';
 
+const storageItem: string | null = localStorage.getItem(LOCAL_STORAGE_KEY);
 const ReferalsBlock = () => {
+  const [disabled, setDisabled] = useState(true);
+  const handalChange = (e: any) => {
+    if (e.target.value) {
+      setDisabled(false);
+    }
+  };
+  // const uniqId = useMemo(() => {
+  //   return uuidv4();
+  // }, []);
+  const copy = () => {
+    navigator.clipboard.writeText(storageItem as string);
+  };
   return (
     <section className={styles.referalsSection}>
       <div className="container">
@@ -26,8 +41,8 @@ const ReferalsBlock = () => {
             </div>
             <div className="col_">
               <div className={styles.codeBlock}>
-                <p>13018783-ff2b-4817-a0ba-e63f05257ebb</p>
-                <button>
+                <p>{storageItem}</p>
+                <button onClick={copy}>
                   <CopySvg />
                 </button>
               </div>
@@ -52,9 +67,14 @@ const ReferalsBlock = () => {
                 <div className={`${styles.formItem}`}>
                   <div className={styles.inputWrapper}>
                     <label htmlFor="invateID">Invitation ID</label>
-                    <input type="text" id="invateID" placeholder="Type Invitation ID" />
+                    <input
+                      type="text"
+                      id="invateID"
+                      placeholder="Type Invitation ID"
+                      onChange={handalChange}
+                    />
                   </div>
-                  <button className={styles.submitBtn} disabled>
+                  <button className={styles.submitBtn} disabled={disabled}>
                     + Add
                   </button>
                 </div>
