@@ -1,11 +1,13 @@
 /* eslint-disable no-constant-condition */
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import { useAccount, useBalance } from 'wagmi';
 
 import PageLoader from './components/PageLoader/PageLoader';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import { LOCAL_STORAGE_KEY } from './constants/localestorageKeys';
 import { Web3Context } from './context/web3Context';
 import ModalWrapper from './features/modal/modal';
 import { ERoutes } from './types';
@@ -19,6 +21,7 @@ import Settings from './views/Settings/Settings';
 
 const Routes: React.FC = () => {
   const [address, setAddress] = useState<string>('');
+
   const { setUser, setConnectOrReconnect, connectOrReconnect, user } = useContext(Web3Context);
   const { isConnected, isReconnecting, isConnecting } = useAccount({
     onConnect({ address, connector, isReconnected }) {
@@ -57,6 +60,14 @@ const Routes: React.FC = () => {
       setConnectOrReconnect('pending');
     }
   }, [isConnecting]);
+
+  useEffect(() => {
+    if (isConnected && !localStorage.getItem(LOCAL_STORAGE_KEY)) {
+      const referalCode = uuidv4();
+      localStorage.setItem(LOCAL_STORAGE_KEY, referalCode);
+    }
+  }, []);
+
   useEffect(() => {
     if (!isConnecting && !isReconnecting) {
       if (!isConnected) {

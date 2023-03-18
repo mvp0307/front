@@ -3,7 +3,7 @@ export enum ERoutes {
   Home = '/',
   Map = '/map',
   Dashboard = '/dashboard',
-  Investitions = '/investitions',
+  Investitions = '/investitions/:id',
   Gross = '/gross',
   Settings = '/settings',
   Error404 = '/404',

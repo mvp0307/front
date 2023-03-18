@@ -51,13 +51,13 @@ const ConnectWallet: React.FC = () => {
 
               return (
                 <div style={{ display: 'flex', gap: 12 }}>
-                  <button
+                  {/* <button
                     onClick={openChainModal}
                     style={{ display: 'flex', alignItems: 'center', background: 'aquamarine' }}
                     type="button"
                   >
-                    {chain.name}
-                  </button>
+                    {chain.name} dsfserffe
+                  </button> */}
 
                   <div className={styles.creds} onClick={openAccountModal}>
                     <div>{account.displayBalance ? `${account.displayBalance}` : ''}</div>

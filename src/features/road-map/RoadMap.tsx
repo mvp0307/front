@@ -33,7 +33,7 @@ const RoadMap = () => {
             </div>
             <div className={`col_ ${styles.roadMap_small}`}>
               <div className={styles.wrapItem}>
-                <p>2023</p>
+                <p>2024</p>
               </div>
             </div>
             <div className={`col_ ${styles.roadMap_normal}`}>

@@ -9,7 +9,7 @@ import WEB3Provider from './context/web3Context';
 import Routes from './router';
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.goerli],
+  [chain.mainnet],
   [
     alchemyProvider({
       apiKey: 'V4sjy7waYEJZFK65EBqCnvysDYnH5yoi',

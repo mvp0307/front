@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import DuckSvg from '../../assets/svgs/DuckSvg';
 import GhostSvg from '../../assets/svgs/GhostSvg';
@@ -7,6 +8,10 @@ import WatermelonSvg from '../../assets/svgs/WatermelonSvg';
 import styles from './advatnages.module.scss';
 
 const Advantages = () => {
+  const history = useHistory();
+  const coursesPage = () => {
+    history.push('/gross');
+  };
   return (
     <section className={styles.advantagesSection}>
       <div className="container">
@@ -26,7 +31,9 @@ const Advantages = () => {
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 20.000</p>
                       </div>
-                      <div className={styles.advantageBtn}>Show Map</div>
+                      <div className={styles.advantageBtn} onClick={coursesPage}>
+                        Become a Gross
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -42,7 +49,9 @@ const Advantages = () => {
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 18.000</p>
                       </div>
-                      <div className={styles.advantageBtn}>Show Map</div>
+                      <div className={styles.advantageBtn} onClick={coursesPage}>
+                        Become a Gross
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -58,7 +67,9 @@ const Advantages = () => {
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 16.000</p>
                       </div>
-                      <div className={styles.advantageBtn}>Show Map</div>
+                      <div className={styles.advantageBtn} onClick={coursesPage}>
+                        Become a Gross
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -74,7 +85,9 @@ const Advantages = () => {
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 15.000</p>
                       </div>
-                      <div className={styles.advantageBtn}>Show Map</div>
+                      <div className={styles.advantageBtn} onClick={coursesPage}>
+                        Become a Gross
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -91,7 +104,9 @@ const Advantages = () => {
                   tempus feugiat aliquet nec leo imperdiet. Dictum risus, mi scelerisque sagittis,
                   ultricies eu, odio platea congue.
                 </p>
-                <div className={styles.outlinedButton}>Become a Gross</div>
+                <div className={styles.outlinedButton} onClick={coursesPage}>
+                  Become a Gross
+                </div>
               </div>
             </div>
           </div>
