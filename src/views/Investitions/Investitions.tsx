@@ -29,7 +29,7 @@ const Investitions: React.FC = () => {
       <main>
         <InvestitionsHero value={currValue} />
         <InvestitionsGross />
-        <InvistitionsInviteUser />
+        <InvistitionsInviteUser value={currValue} />
         <ContactUs />
       </main>
       <Footer />

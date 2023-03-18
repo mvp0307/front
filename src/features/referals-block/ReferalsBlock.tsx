@@ -28,13 +28,14 @@ const ReferalsBlock = () => {
           <div className={styles.currentCode}>
             <div className="col_">
               <h2 className={styles.referalsTitle}>
-                Реферальный Код
+                Referral code
                 <div className="tooltipWrapper">
                   <InfoSvg />
                   <Tooltip
                     id={3}
-                    text1="При помоши личного реферального кода вы можете пригласить друзей и поднять ваш ежедневный процент."
-                    text2="Скопируйте код и попросите вашего друга после регистрации, перед тем как инвестировать, добавить код в блок <strong><<Реферальный код приглашения>></strong>."
+                    text1="With the help of a personal referral code, you can invite friends and increase your daily percentage."
+                    text2="
+                    Copy the code and ask your friend after registration, before investing, add the code to block <strong><< Referral invitation code >></strong>."
                   />
                 </div>
               </h2>
@@ -51,13 +52,13 @@ const ReferalsBlock = () => {
           <div className={styles.inviteBlock}>
             <div className="col_">
               <h2 className={styles.referalsTitle}>
-                <span>Реферальный код приглашения</span>
+                <span>Referral invitation code</span>
                 <div className="tooltipWrapper">
                   <InfoSvg />
                   <Tooltip
                     id={4}
-                    text1="Напишите код приглашения который отправил ваш друг и нажмите кнопку Добавить.Так же у вас есть возможность поделиться своим Реферальным кодом."
-                    text2="Блок выше <strong><<Личный Реферальный Код>></strong>."
+                    text1="Write the invitation code that your friend sent and click the Add button. You also have the opportunity to share your Referral Code."
+                    text2="Block above <strong><< Referral code >></strong>."
                   />
                 </div>
               </h2>

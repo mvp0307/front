@@ -12,12 +12,13 @@ const HowToGross = () => {
             <div className={styles.grossLeftBlock}>
               <div className={styles.titleBlock}>
                 <p className="title_prefix">Investment</p>
-                <h2 className="title_section">Как стать ГРОСС - ом </h2>
+                <h2 className="title_section">How to become Gross?</h2>
               </div>
               <p className={styles.howtoGrossText}>
-                Инвестор получает статус ГРОСС если обшая сумма инвестиции больше чем 10,000$. Полсе
-                того как есть нужное количество средств на балансе автоматом вы получите статус
-                ГРОСС и поменяться механизм расчета ежедневного процента.
+                Investor receives GROSS status if the total investment amount is more than 10,000$.
+                Once you have the required amount of money on your balance, you will automatically
+                receive GROSS status and the mechanism of calculation daily percentage will be
+                changed.
               </p>
             </div>
           </div>

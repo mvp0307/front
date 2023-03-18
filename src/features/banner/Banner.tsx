@@ -16,8 +16,7 @@ const Banner = () => {
           <div className="col_">
             <div className={styles.bannerRight}>
               <p className={styles.bannerText}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa, ornare tempus
-                feugiat aliquet nec leo imperdiet. .
+                Make investments, become GROSS and get more and more daily interest{' '}
               </p>
             </div>
           </div>

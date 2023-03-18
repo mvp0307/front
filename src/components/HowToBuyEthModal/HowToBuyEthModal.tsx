@@ -6,31 +6,31 @@ const HowToBuyEthModal: React.FC = () => {
   return (
     <div className={styles.modalContent}>
       <div className={styles.modalBody}>
-        <h2 className={styles.modalTitle}>Как купить ETH ?</h2>
+        <h2 className={styles.modalTitle}>How to buy ETH?</h2>
         <div className={styles.watchItems}>
           <div className={styles.watchItem}>
-            <h4 className={styles.itemTitle}>Как пополнить кошелек metamask ETH</h4>
+            <h4 className={styles.itemTitle}>How To Deposit ETH To MetaMask</h4>
             <a
-              href="https://www.youtube.com/watch?v=HkNU1x8bUZM"
+              href="https://www.youtube.com/watch?v=FMTYAMPQzSk"
               target="_blank"
               className={styles.watchButton}
               rel="noreferrer"
             >
-              Подробнее
+              Watch the video
             </a>
           </div>
           <div className={styles.watchItem}>
-            <h4 className={styles.itemTitle}>Как купить (Ethereum, ETH) с КАРТЫ?</h4>
+            <h4 className={styles.itemTitle}>How To Buy Ethereum With Card</h4>
             <a
-              href="https://www.youtube.com/watch?v=ra4KBCRzvSY"
+              href="https://www.youtube.com/watch?v=_hYKyOvXa2s"
               target="_blank"
               className={styles.watchButton}
               rel="noreferrer"
             >
-              Подробнее
+              Watch the video
             </a>
           </div>
-          <div className={styles.watchItem}>
+          {/* <div className={styles.watchItem}>
             <h4 className={styles.itemTitle}>Мониторинг обменников BestChange</h4>
             <a
               href="https://www.bestchange.ru/mir-to-ethereum.html"
@@ -52,17 +52,17 @@ const HowToBuyEthModal: React.FC = () => {
               Подробнее
             </a>
           </div>
-          <div className={styles.watchItem}>
-            <h4 className={styles.itemTitle}>Телеграмм боты для пукупки ETH</h4>
-            <a
-              href="https://profinvestment.com/telegram-bots-bitcoin-cryptocurrencies/"
-              target="_blank"
-              className={styles.watchButton}
-              rel="noreferrer"
-            >
-              Подробнее
-            </a>
-          </div>
+          <div className={styles.watchItem}> */}
+          {/* <h4 className={styles.itemTitle}>Телеграмм боты для пукупки ETH</h4>
+          <a
+            href="https://profinvestment.com/telegram-bots-bitcoin-cryptocurrencies/"
+            target="_blank"
+            className={styles.watchButton}
+            rel="noreferrer"
+          >
+            Подробнее
+          </a> */}
+          {/* </div> */}
         </div>
       </div>
     </div>

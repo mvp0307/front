@@ -26,11 +26,11 @@ const ContactUs = () => {
       setErrors(() => {
         return {
           email: !data.email
-            ? 'Поле не может быть пустым'
+            ? 'This field cannot be empty'
             : !validateEmail(data.email)
-            ? 'Неправильный формат Email'
+            ? 'Wrong email format'
             : '',
-          text: !data.text ? 'Поле не может быть пустым' : '',
+          text: !data.text ? 'This field cannot be empty' : '',
         };
       });
     } else {
@@ -47,7 +47,9 @@ const ContactUs = () => {
               <div className={styles.contactLeftSide}>
                 <div className={styles.titleBlock}>
                   <p className="title_prefix">Contact Us</p>
-                  <h2 className="title_section">Save Time And Manage The Profit Of Investment</h2>
+                  <h2 className="title_section">
+                    Fill out the application and our staff will contact you shortly{' '}
+                  </h2>
                 </div>
                 {/* <div className={styles.socialShare}>
                   <a href="#" target="_blank">

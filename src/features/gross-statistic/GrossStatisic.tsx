@@ -6,61 +6,63 @@ const GrossStatisic = () => {
   return (
     <section className={styles.grossStatisticSection}>
       <div className="container">
-        <h2 className={styles.grossTitle}>Инвестор / ГРОСС Инвестор</h2>
+        <h2 className={styles.grossTitle}>Investor / GROSS Investor </h2>
         <div className={styles.grossRow}>
           <div className="col_">
             <div className={styles.grossItem}>
               <div className={styles.grossHeader}>
-                <h3 className={styles.smallTitlte}>Инвестор</h3>
+                <h3 className={styles.smallTitlte}>Investor</h3>
                 <p className={styles.subText}>
-                  Получает статичную сумму ежедневно в зависимости от процента.
+                  Receives static daily amount depending on the percentage.
                 </p>
-                <p className={styles.withPercentText}>Процент считаеться от суммы инвестиции</p>
+                <p className={styles.withPercentText}>
+                  Interest is calculated from the investment amount{' '}
+                </p>
               </div>
               <div className={styles.grossBody}>
-                <h3 className={styles.smallTitlte}>Examples</h3>
+                <h3 className={styles.smallTitlte}>Example</h3>
                 <div className={styles.listWrapper}>
                   <ul className={styles.list}>
                     <li>
-                      <span>Начальная инвестиция</span>
+                      <span>Initial investment </span>
                       <span>$ 1500</span>
                     </li>
                     <li>
-                      <span>Процент</span>
+                      <span>Percentage</span>
                       <span>8 %</span>
                     </li>
                     <li>
-                      <span>Ежендневная сумма к получению</span>
+                      <span>Daily amount to receive </span>
                       <span>$ 120</span>
                     </li>
                     <li>
-                      <span>Пригалшенных пользователей</span>
+                      <span>Invited Users </span>
                       <span>0</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className={`${styles.listWrapper} ${styles.lastWrapper}`}>
-                <h3 className={styles.smallTitlte}>Инвестиционная календарь за 5 дней </h3>
+                <h3 className={styles.smallTitlte}>Investment calendar for 5 days </h3>
                 <ul className={styles.list}>
                   <li>
-                    <span>День 1</span>
+                    <span>Day 1</span>
                     <span>$ 120</span>
                   </li>
                   <li>
-                    <span>День 2</span>
+                    <span>Day 2</span>
                     <span>$ 240</span>
                   </li>
                   <li>
-                    <span>День 3</span>
+                    <span>Day 3</span>
                     <span>$ 360</span>
                   </li>
                   <li>
-                    <span>День 4</span>
+                    <span>Day 4</span>
                     <span>$ 480</span>
                   </li>
                   <li>
-                    <span>День 5</span>
+                    <span>Day 5</span>
                     <span>$ 600</span>
                   </li>
                 </ul>
@@ -70,57 +72,57 @@ const GrossStatisic = () => {
           <div className="col_">
             <div className={styles.grossItem}>
               <div className={styles.grossHeader}>
-                <h3 className={styles.smallTitlte}>ГРОСС Инвестор </h3>
+                <h3 className={styles.smallTitlte}>GROSS Investor</h3>
                 <p className={styles.subText}>
-                  Получает динамичную сумму ежедневно на следуюший день всегда больше чем на
-                  предыдуший.
+                  Getting daily dynamic amount on the next day is always more than on the previous
+                  one.
                 </p>
                 <p className={styles.withPercentText}>
-                  Процент статичный <span className={styles.percentItem}>8 %</span>
+                  Interest is static <span className={styles.percentItem}>8 %</span>
                 </p>
                 <div className={styles.subTextWrapper}>
                   <p className={styles.withPercentText}>
-                    Процент считатеться от
-                    <p className={styles.subText}>СУММА НА БАЛАНСЕ + ОБШАЯ СУММА ИНВЕСТИЦИИ</p>
+                    Percentage is calculated from
+                    <p className={styles.subText}>BALANCE AMOUNT + TOTAL INVESTMENT AMOUNT</p>
                   </p>
                 </div>
               </div>
               <div className={styles.grossBody}>
-                <h3 className={styles.smallTitlte}>Examples</h3>
+                <h3 className={styles.smallTitlte}>Example</h3>
                 <div className={styles.listWrapper}>
                   <ul className={styles.list}>
                     <li>
-                      <span>Сумма инвестиции</span>
+                      <span>Initial investment</span>
                       <span>$ 10.000</span>
                     </li>
                     <li>
-                      <span>Ежедневний фиксированный процент</span>
+                      <span>Daily fixed percentage </span>
                       <span>8 %</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className={`${styles.listWrapper} ${styles.lastWrapper}`}>
-                <h3 className={styles.smallTitlte}>Инвестиционная календарь за 5 дней </h3>
+                <h3 className={styles.smallTitlte}>Investment calendar for 5 days</h3>
                 <ul className={styles.list}>
                   <li>
-                    <span>День 1</span>
+                    <span>Day 1</span>
                     <span>15,000$ + 1200$ = 16.200$</span>
                   </li>
                   <li>
-                    <span>День 2</span>
+                    <span>Day 2</span>
                     <span>16.200$ + 1296$ = 17.496$</span>
                   </li>
                   <li>
-                    <span>День 3</span>
+                    <span>Day 3</span>
                     <span>16.200$ + 1296$ = 17.496$</span>
                   </li>
                   <li>
-                    <span>День 4</span>
+                    <span>Day 4</span>
                     <span>16.200$ + 1296$ = 17.496$</span>
                   </li>
                   <li>
-                    <span>День 5</span>
+                    <span>Day 5</span>
                     <span>20.407$ + 1632$ = 22.039$</span>
                   </li>
                 </ul>

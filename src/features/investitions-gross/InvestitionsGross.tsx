@@ -17,8 +17,8 @@ const InvestitionsGross = () => {
             <div className={styles.grossTexts}>
               <h2 className={styles.grossTitle}>Become a Gross</h2>
               <p className={styles.grossText}>
-                У вас будет возможность вывода средст в каждую минуту, или же вы можете не снимать
-                деньги с баланса и стать <strong>ГРОСС</strong> инвестором.
+                You can withdraw money every minute or you can choose not to withdraw it from your
+                balance and become a <strong> GROSS </strong> investor.
               </p>
             </div>
           </div>

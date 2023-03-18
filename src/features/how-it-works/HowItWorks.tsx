@@ -23,7 +23,7 @@ const HowItWorks = () => {
                 </div>
                 <div className={styles.itemText}>
                   <h3>Connect Wallet</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi</p>
+                  <p>Turn on MetaMask wallet, you can read guide for wallet below </p>
                 </div>
               </div>
             </div>
@@ -34,7 +34,10 @@ const HowItWorks = () => {
                 </div>
                 <div className={styles.itemText}>
                   <h3>Invest</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi</p>
+                  <p>
+                    You do not understand Crypto market? Not a problem - our bot knows where and
+                    when to invest.{' '}
+                  </p>
                 </div>
               </div>
             </div>
@@ -45,7 +48,7 @@ const HowItWorks = () => {
                 </div>
                 <div className={styles.itemText}>
                   <h3>Income</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi</p>
+                  <p>Get and cash out income every day </p>
                 </div>
               </div>
             </div>
@@ -56,7 +59,7 @@ const HowItWorks = () => {
                 </div>
                 <div className={styles.itemText}>
                   <h3>Become a Gross</h3>
-                  <p>Earn huge % every day.Every day more than the previous one.</p>
+                  <p>Invest more and become GROSS</p>
                 </div>
               </div>
             </div>

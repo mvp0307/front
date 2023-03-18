@@ -6,24 +6,25 @@ const GrossBonusActions = () => {
   return (
     <section className={styles.bonsuSection}>
       <div className="container">
-        <h2 className={styles.bonusTitle}>Обналичивание средств, бонусы и акции </h2>
+        <h2 className={styles.bonusTitle}>Cash withdrawals, bonuses and promotions </h2>
         <div className={styles.bonusRow}>
           <div className="col_">
             <div className={styles.bonusInnerLeft}>
               <p>
-                Для ГРОСС пользователея предоставляеться суппорт менеджер который доступен 24/7 .
+                For GROSS users, a support manager is provided that is available 24/7.
                 <br />
-                Обсуждает все вопросы связанные с обналичиванием средств . ГРОСС Инвестором
-                предоставляються Бонусы и Акции в в виде процента и поднятием в список топ
+                <br />
+                Discusses all issues related to cash withdrawals. GROSS Investor is provided Bonuses
+                and Promotions in the form of percentage and is raised to the top list.
               </p>
             </div>
           </div>
           <div className="col_">
             <div className={styles.bonusRight}>
               <p>
-                Для ГРОСС инвесторов не поддержиеваеться формат обналичивания средств в любой
-                момент. <br /> <span>ВАЖНО</span> - Для обналичивания требуеться время для проверки
-                транзакцией и инвестиционного флоу.
+                For GROSS investors, cash withdrawals format is not supported at any time.
+                <br /> <span>IMPORTANT </span> - For cash withdrawal needs time for verification the
+                transaction and investment flow.
               </p>
             </div>
           </div>

@@ -24,7 +24,7 @@ const HeroSection = () => {
           <div className="col_">
             <div className={styles.heroLeftSide}>
               <h1 className={styles.heroTitle}>
-                Бот Крипто Трейдер Стабильный Процент и <p>Ежедневний Доход</p>
+                Crypto Trader Bot, Stable Interest and <p> Daily Income</p>
               </h1>
               {!user && (
                 <button className={styles.heroBtn} onClick={simulateConnectButton}>

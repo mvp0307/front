@@ -14,7 +14,9 @@ const Footer: React.FC = () => {
           <div className={styles.linksWrapper}>
             {/* {user && <p>Contact US</p>} */}
             {user && <a href="/">Contact US</a>}
-            <a href="#">Privacy Policy</a>
+            <a href="policy.pdf" download="Privacy Policy">
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>

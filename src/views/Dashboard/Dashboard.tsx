@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { MainContext } from '../../context/mainContext';
+// import { MainContext } from '../../context/mainContext';
 import Footer from '../../features/Footer/Footer';
 import GrossLine from '../../features/gross-line/GrossLine';
 import Header from '../../features/Header/Header';
@@ -11,7 +11,7 @@ import ReferalsBlock from '../../features/referals-block/ReferalsBlock';
 
 const Dashboard: React.FC = () => {
   const IS_GROSS = false;
-  const { setModal } = useContext(MainContext);
+  // const { setModal } = useContext(MainContext);
 
   return (
     <div className="page">
@@ -25,9 +25,9 @@ const Dashboard: React.FC = () => {
       ) : (
         <PriceList />
       )}
-      <div onClick={() => setModal('success')} className="d_modal_primaryBtn">
+      {/* <div onClick={() => setModal('success')} className="d_modal_primaryBtn">
         Show monetization map
-      </div>
+      </div> */}
       <ReferalsBlock />
       <InvidtedUser />
       {IS_GROSS && <PriceList />}

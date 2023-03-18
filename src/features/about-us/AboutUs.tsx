@@ -14,22 +14,22 @@ const AboutUs = () => {
           <div className="col_">
             <div className={styles.titleBlock}>
               <p className="title_prefix">About Us</p>
-              <h2 className="title_section">Save Time And Manage The Profit Of Investment</h2>
+              <h2 className="title_section">
+                Who we are and why we have the most convenient investment portal{' '}
+              </h2>
             </div>
             <div className={styles.textItem}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa, ornare tempus
-                feugiat aliquet nec leo imperdiet. Dictum risus, mi scelerisque sagittis, ultricies
-                eu, odio platea congue.
+                To become investor on our portal, you first need to open wallet and connect to us
               </p>
-              <span onClick={() => setModal('create-wallet')}>Как открыть кошельек MetaMask</span>
+              <span onClick={() => setModal('create-wallet')}>How to open MetaMask wallet</span>
             </div>
             <div className={styles.textItem}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa, ornare tempus
-                feugiat aliquet nec leo imperdiet. Dictum risus
+                After connecting, you need only to make the first investment and you are already our
+                investor.
               </p>
-              <span onClick={() => setModal('how-to-buy-eth')}>Как купить ETH ?</span>
+              <span onClick={() => setModal('how-to-buy-eth')}>How to buy ETH? </span>
             </div>
           </div>
           <div className="col_">

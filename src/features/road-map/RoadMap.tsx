@@ -7,11 +7,11 @@ const RoadMap = () => {
     <section className={styles.roadMapSection}>
       <div className="container">
         <div className={styles.titleBlock}>
-          <p className="title_prefix">Road Map</p>
-          <h2 className="title_section">Our Team Of Export Do Their Best</h2>
+          <p className="title_prefix">RoadMap</p>
+          <h2 className="title_section">Our export team do their best</h2>
           <p className={styles.titleDescription}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa, ornare tempus
-            feugiat aliquet nec leo imperdiet.
+            We have been trying for many years to make simple investment portal, below is our
+            roadmap for the next years
           </p>
         </div>
         <div className={styles.roadMapArea}>
@@ -23,12 +23,12 @@ const RoadMap = () => {
             </div>
             <div className={`col_ ${styles.roadMap_normal}`}>
               <div className={styles.wrapItem}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Accept payment in BTC. </p>
               </div>
             </div>
             <div className={`col_ ${styles.roadMap_normal}`}>
               <div className={styles.wrapItem}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Double the percentage of monetization from invited users </p>
               </div>
             </div>
             <div className={`col_ ${styles.roadMap_small}`}>
@@ -38,12 +38,12 @@ const RoadMap = () => {
             </div>
             <div className={`col_ ${styles.roadMap_normal}`}>
               <div className={styles.wrapItem}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Accept payment in USD </p>
               </div>
             </div>
             <div className={`col_ ${styles.roadMap_normal}`}>
               <div className={styles.wrapItem}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Withdraw money instantly to the bank card </p>
               </div>
             </div>
           </div>

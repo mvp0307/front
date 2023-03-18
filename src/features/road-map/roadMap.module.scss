@@ -47,13 +47,13 @@
             top: 2px;
             left: 0;
             width: 100%;
-            border: 2px dashed rgba(67, 173, 154, 0.64);
+            border: 1px dashed rgba(67, 173, 154, 0.64);
             @media all and (max-width: 767.98px) {
                 top: 0;
                 left: 5px;
                 width: 2px;
                 height: 100%;
-                border-left: 2px dashed rgba(67, 173, 154, 0.64);
+                border-left: 1px dashed rgba(67, 173, 154, 0.64);
             }
         }
         .roadMapRow {

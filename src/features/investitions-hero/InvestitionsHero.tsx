@@ -20,16 +20,12 @@ const InvestitionsHero: React.FC<IProps> = ({ value }) => {
                 <h2 className="title_section">{value.title}</h2>
               </div>
               <div className={styles.heroTexts}>
+                <p>{value.text}</p>
                 <p>
-                  Инвестиция МИНОР вам даст возможность использовать бот крипто-трейдер на
-                  минимальном мошносте.
+                  The investment amount is from <strong>{value.value}</strong>
                 </p>
                 <p>
-                  Сумма инвестиции состовляет от <strong>100$ до 300$ включительно.</strong>
-                </p>
-                <p>
-                  Вы гарантированно получите 5% от суммы вашей инвестиции{' '}
-                  <strong>ежедневно.</strong>
+                  {value.guarantie} <strong>daily investment.</strong>
                 </p>
               </div>
               <div className={styles.fromToBlock}>
@@ -38,8 +34,8 @@ const InvestitionsHero: React.FC<IProps> = ({ value }) => {
                   <div className={styles.fromToRow}>
                     <div className="col_">
                       <div className={`${styles.side} ${styles.leftSide}`}>
-                        <p>Инвестируйте</p>
-                        <p className={styles.sideNumber}>$ 150</p>
+                        <p>Invest</p>
+                        <p className={styles.sideNumber}>$ {value.invest}</p>
                       </div>
                     </div>
                     <div className="col_">
@@ -49,8 +45,8 @@ const InvestitionsHero: React.FC<IProps> = ({ value }) => {
                     </div>
                     <div className="col_">
                       <div className={`${styles.side} ${styles.rightSide}`}>
-                        <p>Получайте</p>
-                        <p className={styles.sideNumber}>$ 7.5 Каждый день!</p>
+                        <p>Get</p>
+                        <p className={styles.sideNumber}>$ {value.get} Every day!</p>
                       </div>
                     </div>
                   </div>

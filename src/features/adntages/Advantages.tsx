@@ -27,7 +27,7 @@ const Advantages = () => {
                         <WatermelonSvg />
                       </div>
                       <div className={styles.advantageText}>
-                        <h3>Abovyan</h3>
+                        <h3>Noah</h3>
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 20.000</p>
                       </div>
@@ -45,7 +45,7 @@ const Advantages = () => {
                         <SharkSvg />
                       </div>
                       <div className={styles.advantageText}>
-                        <h3>Abovyan</h3>
+                        <h3>Charlotte</h3>
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 18.000</p>
                       </div>
@@ -63,7 +63,7 @@ const Advantages = () => {
                         <DuckSvg />
                       </div>
                       <div className={styles.advantageText}>
-                        <h3>Abovyan</h3>
+                        <h3>William</h3>
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 16.000</p>
                       </div>
@@ -81,7 +81,7 @@ const Advantages = () => {
                         <GhostSvg />
                       </div>
                       <div className={styles.advantageText}>
-                        <h3>Abovyan</h3>
+                        <h3>Sophia</h3>
                         <p>Income</p>
                         <p className={styles.advatnagePrice}>$ 15.000</p>
                       </div>
@@ -100,9 +100,8 @@ const Advantages = () => {
                   <h2 className="title_section">Become a Gross And Earn More Money</h2>
                 </div>
                 <p className="textitem">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa, ornare
-                  tempus feugiat aliquet nec leo imperdiet. Dictum risus, mi scelerisque sagittis,
-                  ultricies eu, odio platea congue.
+                  GROSS - gives you opportunity to double your daily income. You can find out more
+                  by clicking on the button.
                 </p>
                 <div className={styles.outlinedButton} onClick={coursesPage}>
                   Become a Gross
