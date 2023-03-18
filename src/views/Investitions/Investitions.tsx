@@ -22,7 +22,6 @@ const Investitions: React.FC = () => {
   const currValue: Record<string, string> = useMemo(() => {
     return INVEST_DATA[id as TInvest];
   }, []);
-  console.log(currValue);
   return (
     <div className="page">
       <Header />

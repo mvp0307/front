@@ -20,9 +20,7 @@ const ContactUs = () => {
       );
   };
   const handleSubmit = () => {
-    console.log(validateEmail(data.email));
     if (!data.email || !data.text || !validateEmail(data.email)) {
-      console.log(validateEmail(data.email), 'asas');
       setErrors(() => {
         return {
           email: !data.email
@@ -35,7 +33,6 @@ const ContactUs = () => {
       });
     } else {
       setErrors({ email: '', text: '' });
-      console.log(data);
     }
   };
   return (

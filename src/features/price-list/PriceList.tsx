@@ -1,9 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import PureAwardSvg from '../../assets/svgs/PureAwardSvg';
 import styles from './priceList.module.scss';
 
 const PriceList = () => {
+  const history = useHistory();
   return (
     <section className={styles.priceListSectin}>
       <div className="container">
@@ -32,7 +34,12 @@ const PriceList = () => {
                   </li>
                 </ul>
                 <div className={styles.itemButtons}>
-                  <button className={styles.outlinedButton}>Show More</button>
+                  <button
+                    className={styles.outlinedButton}
+                    onClick={() => history.push('/investitions/minor')}
+                  >
+                    Show More
+                  </button>
                   <button className={styles.filledButton}>Buy</button>
                 </div>
               </div>
@@ -58,7 +65,12 @@ const PriceList = () => {
                   </li>
                 </ul>
                 <div className={styles.itemButtons}>
-                  <button className={styles.outlinedButton}>Show More</button>
+                  <button
+                    className={styles.outlinedButton}
+                    onClick={() => history.push('/investitions/major')}
+                  >
+                    Show More
+                  </button>
                   <button className={styles.filledButton}>Buy</button>
                 </div>
               </div>
@@ -84,7 +96,12 @@ const PriceList = () => {
                   </li>
                 </ul>
                 <div className={styles.itemButtons}>
-                  <button className={styles.outlinedButton}>Show More</button>
+                  <button
+                    className={styles.outlinedButton}
+                    onClick={() => history.push('/investitions/grand')}
+                  >
+                    Show More
+                  </button>
                   <button className={styles.filledButton}>Buy</button>
                 </div>
               </div>
@@ -115,7 +132,9 @@ const PriceList = () => {
                   </li>
                 </ul>
                 <div className={styles.itemButtons}>
-                  <button className={styles.outlinedButton}>Show More</button>
+                  <button className={styles.outlinedButton} onClick={() => history.push('/gross')}>
+                    Show More
+                  </button>
                   <button className={styles.filledButton}>Buy</button>
                 </div>
               </div>

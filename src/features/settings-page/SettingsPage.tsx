@@ -18,7 +18,6 @@ const SettingsPage = () => {
   const regex = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
 
   const hendleEmail = (e: any) => {
-    console.log(regex.test(email));
     setEmail(e.target.value);
     setError('');
     if (regex.test(email) === false) {

@@ -15,13 +15,13 @@ import Dashboard from './views/Dashboard/Dashboard';
 import Error404 from './views/Error404/Error404';
 import Gross from './views/Gross/Gross';
 import HomePage from './views/HomePage/HomePage';
+import { CHECK_INVEST, TInvest } from './views/Investitions/data';
 import Investitions from './views/Investitions/Investitions';
 import Map from './views/Map/Map';
 import Settings from './views/Settings/Settings';
 
 const Routes: React.FC = () => {
   const [address, setAddress] = useState<string>('');
-
   const { setUser, setConnectOrReconnect, connectOrReconnect, user } = useContext(Web3Context);
   const { isConnected, isReconnecting, isConnecting } = useAccount({
     onConnect({ address, connector, isReconnected }) {
@@ -92,9 +92,18 @@ const Routes: React.FC = () => {
             <Route exact path={`${ERoutes.Home}`}>
               <HomePage />
             </Route>
-            <Route exact path={`${ERoutes.Investitions}`}>
-              <Investitions />
-            </Route>
+            <Route
+              exact
+              path={`${ERoutes.Investitions}`}
+              render={(props: any) => {
+                if (!CHECK_INVEST.includes(props.match.params.id as TInvest)) {
+                  props.history.push('/');
+                } else {
+                  return <Investitions />;
+                }
+              }}
+            />
+
             <Route exact path={`${ERoutes.Gross}`}>
               <Gross />
             </Route>
