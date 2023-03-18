@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "assert": "^2.0.0",
