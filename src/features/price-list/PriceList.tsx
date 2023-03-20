@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import PureAwardSvg from '../../assets/svgs/PureAwardSvg';
+import { MainContext } from '../../context/mainContext';
 import styles from './priceList.module.scss';
 
 const PriceList = () => {
+  const { setModal } = useContext(MainContext);
   const history = useHistory();
   return (
     <section className={styles.priceListSectin}>
@@ -40,7 +42,9 @@ const PriceList = () => {
                   >
                     Show More
                   </button>
-                  <button className={styles.filledButton}>Buy</button>
+                  <button className={styles.filledButton} onClick={() => setModal('add-money')}>
+                    Buy
+                  </button>
                 </div>
               </div>
             </div>
@@ -71,7 +75,9 @@ const PriceList = () => {
                   >
                     Show More
                   </button>
-                  <button className={styles.filledButton}>Buy</button>
+                  <button className={styles.filledButton} onClick={() => setModal('add-money')}>
+                    Buy
+                  </button>
                 </div>
               </div>
             </div>
@@ -102,7 +108,9 @@ const PriceList = () => {
                   >
                     Show More
                   </button>
-                  <button className={styles.filledButton}>Buy</button>
+                  <button className={styles.filledButton} onClick={() => setModal('add-money')}>
+                    Buy
+                  </button>
                 </div>
               </div>
             </div>
@@ -135,7 +143,9 @@ const PriceList = () => {
                   <button className={styles.outlinedButton} onClick={() => history.push('/gross')}>
                     Show More
                   </button>
-                  <button className={styles.filledButton}>Buy</button>
+                  <button className={styles.filledButton} onClick={() => setModal('add-money')}>
+                    Buy
+                  </button>
                 </div>
               </div>
             </div>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import RejectedIconSvg from '../../assets/svgs/RejectedIconSvg';
+import { MainContext } from '../../context/mainContext';
 import styles from './errorModal.module.scss';
 
 const ErrorModal: React.FC = () => {
+  const { setModal } = useContext(MainContext);
   return (
     <div className={styles.modalContent}>
       <div className={styles.modalBody}>
@@ -15,7 +17,7 @@ const ErrorModal: React.FC = () => {
           <RejectedIconSvg />
         </div>
         <div className={styles.modalBtn}>
-          <button className={styles.outlineBtn} type="button">
+          <button className={styles.outlineBtn} type="button" onClick={() => setModal('')}>
             Dismiss
           </button>
         </div>

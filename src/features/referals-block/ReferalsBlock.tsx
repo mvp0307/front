@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 // import { v4 as uuidv4 } from 'uuid';
 import CopySvg from '../../assets/svgs/CopySvg';
 import InfoSvg from '../../assets/svgs/InfoSvg';
 import Tooltip from '../../components/Tooltip/Tooltip';
 import { LOCAL_STORAGE_KEY } from '../../constants/localestorageKeys';
+import { MainContext } from '../../context/mainContext';
 import styles from './referalsBlock.module.scss';
 
 const storageItem: string | null = localStorage.getItem(LOCAL_STORAGE_KEY);
 const ReferalsBlock = () => {
   const [disabled, setDisabled] = useState(true);
+  const { setModal } = useContext(MainContext);
   const handalChange = (e: any) => {
     if (e.target.value) {
       setDisabled(false);
@@ -75,7 +77,12 @@ const ReferalsBlock = () => {
                       onChange={handalChange}
                     />
                   </div>
-                  <button className={styles.submitBtn} disabled={disabled}>
+                  <button
+                    type="button"
+                    className={styles.submitBtn}
+                    disabled={disabled}
+                    onClick={() => setModal('error')}
+                  >
                     + Add
                   </button>
                 </div>
