@@ -14,4 +14,5 @@ export type TModalTypes =
   | 'how-to-buy-eth'
   | 'withdraw-money'
   | 'success'
-  | 'error';
+  | 'error'
+  | 'authError';

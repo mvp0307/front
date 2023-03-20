@@ -4,14 +4,17 @@ import RejectedIconSvg from '../../assets/svgs/RejectedIconSvg';
 import { MainContext } from '../../context/mainContext';
 import styles from './errorModal.module.scss';
 
-const ErrorModal: React.FC = () => {
+const AuthError: React.FC = () => {
   const { setModal } = useContext(MainContext);
   return (
     <div className={styles.modalContent}>
       <div className={styles.modalBody}>
-        <h2 className={styles.modalTitle}>Verification Error</h2>
+        <h2 className={styles.modalTitle}>Technical error</h2>
         <div className={styles.modaltext}>
-          <p>Your account is not verified, please verify email address in settings</p>
+          <p>
+            Our development team has already dealt with the problem, soon you will be able to verify
+            your account
+          </p>
         </div>
         <div className={styles.modalIcon}>
           <RejectedIconSvg />
@@ -26,4 +29,4 @@ const ErrorModal: React.FC = () => {
   );
 };
 
-export default ErrorModal;
+export default AuthError;

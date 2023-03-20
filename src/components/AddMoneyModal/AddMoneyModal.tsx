@@ -30,7 +30,7 @@ const AddMoneyModal: React.FC = () => {
         <h2 className={styles.modalTitle}>Add Money</h2>
         {error && (
           <p className={styles.warningMessage}>
-            <WarningIcon /> Pls enter your amount
+            <WarningIcon /> Please enter your amount
           </p>
         )}
         <div className={styles.modalInvestItems}>
@@ -106,7 +106,7 @@ const AddMoneyModal: React.FC = () => {
             }
           }}
         >
-          Инвестиорвать
+          Invest money
         </button>
       </div>
     </div>

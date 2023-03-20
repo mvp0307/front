@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 // import { v4 as uuidv4 } from 'uuid';
@@ -7,10 +7,12 @@ import CopySvg from '../../assets/svgs/CopySvg';
 import UsersSvg from '../../assets/svgs/UsersSvg';
 import WarningIcon from '../../assets/svgs/WarningIcon';
 import { LOCAL_STORAGE_KEY } from '../../constants/localestorageKeys';
+import { MainContext } from '../../context/mainContext';
 import styles from './settingsPage.module.scss';
 
 const storageItem = localStorage.getItem(LOCAL_STORAGE_KEY);
 const SettingsPage = () => {
+  const { setModal } = useContext(MainContext);
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [disabled, setDisabled] = useState(true);
@@ -59,7 +61,7 @@ const SettingsPage = () => {
         <div className={styles.settingsUserWrapper}>
           <UsersSvg />
           <div className={styles.copyReferralCodecontainer}>
-            <p>Реферальный код</p>
+            <p>Referral code</p>
             <div className={styles.copyReferralCode}>
               <p>{storageItem}</p>
               <button onClick={copy}>
@@ -78,7 +80,11 @@ const SettingsPage = () => {
         <label htmlFor="emailId">Email</label>
         <div className={styles.buttonWrapper}>
           <input type="email" name="Email" onChange={hendleEmail} />
-          <button className={styles.settingsPageButn} disabled={disabled}>
+          <button
+            className={styles.settingsPageButn}
+            onClick={() => setModal('authError')}
+            disabled={disabled}
+          >
             Confirm
           </button>
         </div>

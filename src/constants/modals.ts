@@ -1,4 +1,5 @@
 import AddMoneyModal from '../components/AddMoneyModal/AddMoneyModal';
+import AuthError from '../components/AuthErrorModal/ErrorModal';
 import CreateWalletModal from '../components/CreateWalletModal/CreateWalletModal';
 import ErrorModal from '../components/ErrorModal/ErrorModal';
 import HowToBuyEthModal from '../components/HowToBuyEthModal/HowToBuyEthModal';
@@ -29,5 +30,8 @@ export const MODALS: Record<
   },
   error: {
     component: ErrorModal,
+  },
+  authError: {
+    component: AuthError,
   },
 };

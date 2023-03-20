@@ -1,0 +1,49 @@
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+
+.modalContent {
+    max-height: calc(100vh - 3.5rem);
+    overflow: auto;
+    @media only screen and (max-width: 767.98px) {
+        padding: 20px;
+    }
+    .modalBody {
+        text-align: center;
+        .modalTitle {
+            @include fontRem(24, 700, 33);
+            margin-bottom: 37px;
+        }
+        .modaltext {
+            margin-bottom: 36px;
+            p {
+                @include fontRem(18, 400, 24);
+                color: rgba(1, 28, 24, 0.8);
+            }
+        }
+        .modalIcon {
+            margin-bottom: 80px;
+            @media only screen and (max-width: 767.98px) {
+                margin-bottom: 30px;
+            }
+        }
+        .modalBtn {
+            button {
+                @include flex-center-vert;
+                @include buttonNulled;
+                padding: 12px 16px;
+                background: $gradient;
+                border-radius: 12px 12px 0px 12px;
+                color: $white;
+                transition: 0.3s;
+                width: 100%;
+                max-width: 217px;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                &:hover {
+                    background: $gradientReverse;
+                }
+            }
+        }
+    }
+}
