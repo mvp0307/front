@@ -14,7 +14,7 @@ export const INVEST_DATA: Record<TInvest, Record<string, string>> = {
   },
   major: {
     title: 'Major',
-    text: 'MINOR investment will give you opportunity to use crypto trader bot at a medium power.',
+    text: 'MAJOR investment will give you opportunity to use crypto trader bot at a medium power.',
     value: '301$ to 1000$ inclusive',
     guarantie: 'You are guaranteed to receive 6.5% of your',
     invest: '500',
@@ -23,7 +23,7 @@ export const INVEST_DATA: Record<TInvest, Record<string, string>> = {
   },
   grand: {
     title: 'Grand',
-    text: 'MINOR investment will give you opportunity to use crypto trader bot at a maximum power.',
+    text: 'GRAND investment will give you opportunity to use crypto trader bot at a maximum power.',
     value: '1001$ to 5000$ inclusive',
     guarantie: 'You are guaranteed to receive 8% of your',
     invest: '3000',
