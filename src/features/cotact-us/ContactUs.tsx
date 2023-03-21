@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import React, { useContext, useState } from 'react';
 
+import { MainContext } from '../../context/mainContext';
 // import Discord from '../../assets/svgs/Discord';
 // import InstagramSvg from '../../assets/svgs/InstagramSvg';
 // import TikTokSvg from '../../assets/svgs/TikTokSvg';
@@ -12,6 +14,8 @@ const ContactUs = () => {
     email: '',
     text: '',
   });
+  const { setModal } = useContext(MainContext);
+  // const form = useRef();
   const validateEmail = (email: string) => {
     return String(email)
       .toLowerCase()
@@ -33,6 +37,25 @@ const ContactUs = () => {
       });
     } else {
       setErrors({ email: '', text: '' });
+      emailjs
+        .send(
+          'service_hjjohnm',
+          'template_meifq0n',
+          {
+            email: data.email,
+            message: data.text,
+          },
+          'Y0SeCnulSkzcqsL0K'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setModal('success');
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
   };
   return (
@@ -79,6 +102,7 @@ const ContactUs = () => {
                             };
                           });
                         }}
+                        name="email"
                         type="email"
                         id="emailId"
                         placeholder="Type your email"
@@ -98,6 +122,7 @@ const ContactUs = () => {
                             };
                           });
                         }}
+                        name="message"
                         id="messageId"
                         placeholder="Type your message..."
                       />

@@ -118,13 +118,13 @@ const PriceList = () => {
           <div className="col_">
             <div className={styles.pricelistItem}>
               <div>
-                <h2 className={styles.itemTitle}>
+                <h2 className={styles.titleGross}>
                   {' '}
                   <PureAwardSvg />
                   Gross
                 </h2>
                 <div className={styles.priceInfo}>
-                  <p className={styles.itemPrice}>$ 10.000 +</p>
+                  <p className={styles.priceGrose}>$ 10.000 +</p>
                   <p className={styles.dailyIncome}>+ daily income</p>
                 </div>
               </div>

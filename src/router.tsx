@@ -108,7 +108,9 @@ const Routes: React.FC = () => {
               <Gross />
             </Route>
             <Route exact path={`${ERoutes.Settings}`}>
-              <Settings />
+              <ProtectedRoute user={user}>
+                <Settings />
+              </ProtectedRoute>
             </Route>
             <Route>
               <Error404 />
