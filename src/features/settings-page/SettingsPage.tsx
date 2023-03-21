@@ -62,7 +62,7 @@ const SettingsPage = () => {
           <UsersSvg />
           <div className={styles.copyReferralCodecontainer}>
             <p>Referral code</p>
-            <div className={styles.copyReferralCode}>
+            <div className={styles.codeBlock}>
               <p>{storageItem}</p>
               <button onClick={copy}>
                 <CopySvg />

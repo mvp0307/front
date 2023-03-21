@@ -3,38 +3,47 @@
 
 
 .settingsPageSection {
-    height: calc(100vh - 265px);
     display: flex;
     align-items: center;
-    margin-top: 24px;
-
-    .container{
-        margin-top: 600px;
-    }
-    
     @media all and (max-width: 767.98px) {
-        height: calc(100vh - 265px);
-        padding: 56px 67px 0 67px;
+        height: auto;
+        padding: 0px 16px 0 16px;
+        margin-top: 24px;
     }
 }
 
  .settingsPageeSubTitle{
-    margin-top: 24px;
+    margin-top: 10px;
+    @media all and (max-width: 767.98px) {
+        margin-top: 16px;
+    }
  }
 .settingsUserWrapper{
     display: flex;
     align-items: flex-end;
-    margin-top: 15px;
+    margin-top: 24px;
+    @media all and (max-width: 767.98px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     
 }
  .copyReferralCodecontainer{
     margin-left: 50px;
     justify-content: flex-start;
+    max-width: 520px;
+    width: 100%;
+    @media all and (max-width: 767.98px) {
+    max-width: 100%;
+
+      margin-left: 0;
+      width: 100%;
+      margin-top: 32px;
+    }
  }
-.copyReferralCode{
+ .codeBlock {
     display: flex;
-    width: 520px;
-    height: 58px;
     gap: 10px;
     background-color: $white;
     box-shadow: 2px 12px 32px -12px rgba(14, 114, 102, 0.06);
@@ -44,6 +53,7 @@
     p {
         @include textShorten(1);
         @include fontRem(16, 600, 22);
+
     }
     button {
         margin-left: auto;
@@ -53,6 +63,11 @@
             min-height: 18px;
         }
     }
+    @media all and (max-width: 767.98px) {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 24px;
+      }
 }
 
 .settingsPageeGrossLink{
@@ -91,12 +106,13 @@
     }
     @media all and (max-width: 767.98px) {
         max-width: 100%;
+        margin-top: 54px
     }
 }
 label {
     display: block;
     cursor: pointer;
-    margin-top: 31px;
+    margin-top: 32px;
     @include fontRem(16, 600, 19);
     letter-spacing: 0.05em;
     color: $green;
@@ -106,7 +122,7 @@ label {
     margin-top: 8px;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     @media all and (max-width: 767.98px) {
         display: flex;
         flex-direction: column;

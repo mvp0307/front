@@ -88,9 +88,9 @@ const AddMoneyModal: React.FC = () => {
         <p className={styles.infoText}>
           {properties && properties.remainderPrice > 0 && (
             <div>
-              Инвестируйти еше
+              Invest another
               <span className={styles.greenInfo}> {properties.remainderPrice}$ </span>
-              чтоб повысить ежедневний процент до{' '}
+              to increase your daily percentage to{' '}
               <span className={styles.orangeInfo}>{properties.needDailyRate}%</span>
             </div>
           )}{' '}
