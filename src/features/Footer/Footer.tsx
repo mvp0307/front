@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footerRow}>
-          <p> &#169; InvesTonus INC. All Rights reserved</p>
+          <p> &#169; InvesTonus INC. All Rights reserved 22568 UE</p>
 
           <div className={styles.linksWrapper}>
             {/* {user && <p>Contact US</p>} */}
