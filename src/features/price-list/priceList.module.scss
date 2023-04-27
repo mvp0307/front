@@ -69,6 +69,7 @@
                 justify-content: center;
                 .priceGrose{
                     color: $green;
+                    @include fontRem(28, 700, 50);
                     @media all and (max-width: 767.98px) {
                         @include fontRem(18, 700, 25);
                         margin-bottom: 12px;
@@ -93,7 +94,8 @@
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 19px;
-                    color: $green;    
+                    color: $green;   
+                    @include fontRem(20, 700, 38); 
                 }
             }
             .percentList {
@@ -146,6 +148,7 @@
                         padding: 12px 16px;
                         transition: 0.3s;
                         cursor: pointer;
+                        font-weight: 600;
                         @media all and (max-width: 1280px) {
                             padding: 12px 6px;
                         }
@@ -163,6 +166,7 @@
                         border-radius: 12px 12px 0px 12px;
                         color: $white;
                         transition: 0.3s;
+                        font-weight: 600;
                         &:hover {
                             background: $gradientReverse;
                         }
