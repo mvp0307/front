@@ -24,11 +24,11 @@ const HeroSection = () => {
           <div className="col_">
             <div className={styles.heroLeftSide}>
               <h1 className={styles.heroTitle}>
-                Crypto Trader Bot, Stable Interest and <p> Daily Income</p>
+                Crypto Trader Bot: Stable Interest and <p> Daily Income.</p>
               </h1>
               {!user && (
                 <button className={styles.heroBtn} onClick={simulateConnectButton}>
-                  <MetamaskSvg /> CONNECT METAMSK
+                  <MetamaskSvg /> Connect MetaMask
                 </button>
               )}
             </div>

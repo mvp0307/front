@@ -5,6 +5,7 @@
 .settingsPageSection {
     display: flex;
     align-items: center;
+    height: 100vh;
     @media all and (max-width: 767.98px) {
         height: auto;
         padding: 0px 16px 0 16px;
@@ -84,6 +85,7 @@
     margin-top: 48px;
     display: flex; 
     align-items: center;
+    
 }
 
 .waarningVerifyEmailcontainer{
@@ -162,6 +164,7 @@ label {
         min-width: 146px;
         text-align: center;
         justify-content: center;
+        font-weight:600;
 
         &:hover {
             background: $gradientReverse;
