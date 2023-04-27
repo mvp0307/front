@@ -3,7 +3,6 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Avatar from 'boring-avatars';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 import MetamaskSvg from '../../assets/svgs/MetamaskSvg';
 import { AVATAR } from '../../constants/avatart';
@@ -13,7 +12,6 @@ import styles from './connectWallet.module.scss';
 
 const ConnectWallet: React.FC = () => {
   const isMobile = useMediaQuery(SCREENS.mobile);
-  const history = useHistory();
   return (
     <ConnectButton.Custom>
       {({ account, chain, openAccountModal, openChainModal, openConnectModal, mounted }) => {
@@ -50,7 +48,7 @@ const ConnectWallet: React.FC = () => {
                   </button>
                 );
               }
-              history.push('/dashboard');
+
               return (
                 <div style={{ display: 'flex', gap: 12 }}>
                   {/* <button
